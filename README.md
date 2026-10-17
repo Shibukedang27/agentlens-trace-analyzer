@@ -51,7 +51,7 @@ Benchmark dataset: **1,000 synthetic runs / 9,611 spans** (seed 42), 281 runs wi
 | any rule (run has any anomaly) | 281 | 0.892 | 0.886 | **0.889** | |
 | IsolationForest (any anomaly) | 281 | 0.980 | 0.349 | **0.514** | ROC-AUC 0.891 |
 
-**Throughput** (49,953 spans / 5,000 runs, median of 3 runs, Python 3.13.5, 8 CPUs): **37,126 spans/sec** for the full file pipeline (parse + metrics + 5 detectors + IsolationForest), 50,112 spans/sec without IsolationForest.
+**Throughput** (49,953 spans / 5,000 runs, median of 3 runs, Python 3.13.5, 8 CPUs): **34,178 spans/sec** for the full file pipeline (parse + metrics + 5 detectors + IsolationForest), 44,963 spans/sec without IsolationForest.
 <!-- RESULTS:END -->
 
 The generator deliberately makes this hard to ace: normal runs contain *benign look-alikes* (legit status

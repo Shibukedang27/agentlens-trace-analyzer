@@ -32,5 +32,5 @@ IsolationForest ROC-AUC (any anomaly): 0.891
 
 | Pipeline | Seconds | Spans/sec |
 |---|---:|---:|
-| parse + metrics + detectors + IsolationForest | 1.346 | 37,126 |
-| parse + metrics + detectors | 0.997 | 50,112 |
+| parse + metrics + detectors + IsolationForest | 1.462 | 34,178 |
+| parse + metrics + detectors | 1.111 | 44,963 |
