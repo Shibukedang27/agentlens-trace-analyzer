@@ -1,0 +1,117 @@
+{
+ "detection": {
+  "n_runs": 1000,
+  "n_spans": 9611,
+  "seed": 42,
+  "detectors": {
+   "tool_loop": {
+    "tp": 57,
+    "fp": 9,
+    "fn": 12,
+    "support": 69,
+    "precision": 0.8636,
+    "recall": 0.8261,
+    "f1": 0.8444
+   },
+   "retry_storm": {
+    "tp": 30,
+    "fp": 0,
+    "fn": 10,
+    "support": 40,
+    "precision": 1.0,
+    "recall": 0.75,
+    "f1": 0.8571
+   },
+   "idle_run": {
+    "tp": 64,
+    "fp": 12,
+    "fn": 4,
+    "support": 68,
+    "precision": 0.8421,
+    "recall": 0.9412,
+    "f1": 0.8889
+   },
+   "prompt_bloat": {
+    "tp": 46,
+    "fp": 6,
+    "fn": 1,
+    "support": 47,
+    "precision": 0.8846,
+    "recall": 0.9787,
+    "f1": 0.9293
+   },
+   "oversized_model": {
+    "tp": 71,
+    "fp": 12,
+    "fn": 12,
+    "support": 83,
+    "precision": 0.8554,
+    "recall": 0.8554,
+    "f1": 0.8554
+   }
+  },
+  "rules_any": {
+   "tp": 249,
+   "fp": 30,
+   "fn": 32,
+   "support": 281,
+   "precision": 0.8925,
+   "recall": 0.8861,
+   "f1": 0.8893
+  },
+  "isolation_forest": {
+   "tp": 98,
+   "fp": 2,
+   "fn": 183,
+   "support": 281,
+   "precision": 0.98,
+   "recall": 0.3488,
+   "f1": 0.5144,
+   "roc_auc": 0.8907
+  },
+  "anomalous_runs": 281
+ },
+ "robustness": {
+  "tool_loop": {
+   "f1_mean": 0.8398,
+   "f1_std": 0.0276
+  },
+  "retry_storm": {
+   "f1_mean": 0.9369,
+   "f1_std": 0.0123
+  },
+  "idle_run": {
+   "f1_mean": 0.9006,
+   "f1_std": 0.0396
+  },
+  "prompt_bloat": {
+   "f1_mean": 0.8888,
+   "f1_std": 0.0287
+  },
+  "oversized_model": {
+   "f1_mean": 0.8252,
+   "f1_std": 0.034
+  },
+  "seeds": [
+   1,
+   2,
+   3,
+   4,
+   5
+  ]
+ },
+ "throughput": {
+  "n_runs": 5000,
+  "n_spans": 49953,
+  "repeats": 3,
+  "median_seconds_full": 1.346,
+  "spans_per_sec_full": 37126,
+  "median_seconds_rules_only": 0.997,
+  "spans_per_sec_rules_only": 50112,
+  "machine": {
+   "python": "3.13.5",
+   "platform": "Linux-6.12.94+-x86_64-with-glibc2.41",
+   "cpu_count": 8
+  }
+ }
+}

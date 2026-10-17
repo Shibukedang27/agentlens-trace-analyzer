@@ -1,0 +1,3129 @@
+{
+ "summary": {
+  "runs": 600,
+  "spans": 5676,
+  "agents": 5,
+  "llm_calls": 3062,
+  "tool_calls": 2014,
+  "total_cost": 41.9815758,
+  "avg_cost_per_run": 0.069969293,
+  "input_tokens": 9263694,
+  "output_tokens": 380513,
+  "total_tokens": 9644207,
+  "error_rate": 0.06560283687943262,
+  "p50_run_ms": 16873.0,
+  "p95_run_ms": 32465.399999999972,
+  "p50_llm_ms": 2481.6000000000004,
+  "p95_llm_ms": 6846.424999999997,
+  "findings": 187,
+  "flagged_runs": 173,
+  "est_savings": 6.9791514999999995,
+  "savings_pct": 16.624319995153684,
+  "anomaly_outliers": 60,
+  "currency": "USD"
+ },
+ "savings_by_detector": [
+  {
+   "detector": "tool_loop",
+   "label": "Tool-call loop",
+   "findings": 39,
+   "runs": 39,
+   "wasted_tokens": 511916,
+   "est_savings": 2.218588
+  },
+  {
+   "detector": "retry_storm",
+   "label": "Retry storm",
+   "findings": 19,
+   "runs": 19,
+   "wasted_tokens": 151514,
+   "est_savings": 0.637064
+  },
+  {
+   "detector": "idle_run",
+   "label": "Idle / no-op run",
+   "findings": 54,
+   "runs": 54,
+   "wasted_tokens": 186480,
+   "est_savings": 0.5397768
+  },
+  {
+   "detector": "prompt_bloat",
+   "label": "Prompt bloat",
+   "findings": 30,
+   "runs": 30,
+   "wasted_tokens": 769651,
+   "est_savings": 3.352303
+  },
+  {
+   "detector": "oversized_model",
+   "label": "Oversized model",
+   "findings": 45,
+   "runs": 45,
+   "wasted_tokens": 0,
+   "est_savings": 0.2314197
+  }
+ ],
+ "agents": [
+  {
+   "agent": "support-agent",
+   "runs": 173,
+   "total_cost": 15.8802572,
+   "avg_cost_per_run": 0.09179339421965318,
+   "total_tokens": 2967769,
+   "avg_tokens_per_run": 17154.73410404624,
+   "p50_run_ms": 19062.0,
+   "p95_run_ms": 30653.400000000005,
+   "p50_llm_ms": 2519.3,
+   "p95_llm_ms": 6945.709999999999,
+   "error_rate": 0.0737379466817924
+  },
+  {
+   "agent": "sql-analyst",
+   "runs": 105,
+   "total_cost": 11.582078300000001,
+   "avg_cost_per_run": 0.11030550761904763,
+   "total_tokens": 2182602,
+   "avg_tokens_per_run": 20786.685714285715,
+   "p50_run_ms": 20253.0,
+   "p95_run_ms": 33195.399999999994,
+   "p50_llm_ms": 2624.6,
+   "p95_llm_ms": 6796.1,
+   "error_rate": 0.05243790248390064
+  },
+  {
+   "agent": "research-agent",
+   "runs": 113,
+   "total_cost": 10.336225699999998,
+   "avg_cost_per_run": 0.09147102389380529,
+   "total_tokens": 3199893,
+   "avg_tokens_per_run": 28317.63716814159,
+   "p50_run_ms": 23043.0,
+   "p95_run_ms": 36624.599999999984,
+   "p50_llm_ms": 2655.8,
+   "p95_llm_ms": 6753.15,
+   "error_rate": 0.048348106365834004
+  },
+  {
+   "agent": "ops-heartbeat",
+   "runs": 146,
+   "total_cost": 4.1760491,
+   "avg_cost_per_run": 0.028603076027397263,
+   "total_tokens": 1248678,
+   "avg_tokens_per_run": 8552.589041095891,
+   "p50_run_ms": 12699.0,
+   "p95_run_ms": 22169.5,
+   "p50_llm_ms": 1814.7,
+   "p95_llm_ms": 6928.339999999979,
+   "error_rate": 0.09327548806941431
+  },
+  {
+   "agent": "faq-bot",
+   "runs": 63,
+   "total_cost": 0.0069655,
+   "avg_cost_per_run": 0.00011056349206349206,
+   "total_tokens": 45265,
+   "avg_tokens_per_run": 718.4920634920635,
+   "p50_run_ms": 2747.0,
+   "p95_run_ms": 5451.3,
+   "p50_llm_ms": 2662.1,
+   "p95_llm_ms": 5395.32,
+   "error_rate": 0.0
+  }
+ ],
+ "models": [
+  {
+   "model": "orion-large",
+   "calls": 1439,
+   "input_tokens": 4844738,
+   "output_tokens": 213937,
+   "cost": 27.432745,
+   "p50_latency_ms": 3071.9,
+   "p95_latency_ms": 7076.769999999999,
+   "error_rate": 0.014593467685892982
+  },
+  {
+   "model": "vega-pro",
+   "calls": 1095,
+   "input_tokens": 4217502,
+   "output_tokens": 154295,
+   "cost": 14.504045999999999,
+   "p50_latency_ms": 2905.4,
+   "p95_latency_ms": 7162.37,
+   "error_rate": 0.01643835616438356
+  },
+  {
+   "model": "orion-mini",
+   "calls": 253,
+   "input_tokens": 89383,
+   "output_tokens": 2313,
+   "cost": 0.0295905,
+   "p50_latency_ms": 440.1,
+   "p95_latency_ms": 605.12,
+   "error_rate": 0.0
+  },
+  {
+   "model": "vega-flash",
+   "calls": 275,
+   "input_tokens": 112071,
+   "output_tokens": 9968,
+   "cost": 0.0151943,
+   "p50_latency_ms": 465.1,
+   "p95_latency_ms": 3892.8900000000017,
+   "error_rate": 0.0
+  }
+ ],
+ "findings": [
+  {
+   "detector": "tool_loop",
+   "trace_id": "aefcfad8efc89849b3aa7efe4458a885",
+   "agent": "sql-analyst",
+   "severity": "medium",
+   "title": "list_tables called 4x with identical arguments",
+   "evidence": "tool=list_tables args={\"query\": \"list_tables-482334539\"} repeated 4 times (threshold 3); 3 calls and 3 deciding LLM calls are redundant",
+   "span_ids": [
+    "29d4beef3eabedcb",
+    "fd5166e6451b4cf3",
+    "8e944239b02b61c4",
+    "d7c524a55304317f"
+   ],
+   "wasted_tokens": 11122,
+   "est_savings": 0.056580000000000005
+  },
+  {
+   "detector": "prompt_bloat",
+   "trace_id": "30b187ef310c0c003fa7f1041bf90e27",
+   "agent": "sql-analyst",
+   "severity": "high",
+   "title": "Prompt grew 7.6x over 6 LLM calls",
+   "evidence": "input tokens 1839 -> 13888 (7.6x, threshold 2.5x), grew on 5/5 steps. Savings assume compaction removes 50% of the growth",
+   "span_ids": [
+    "766ecb15474ebc19",
+    "134c6c92ec5b227c",
+    "db20a56edc815fe7",
+    "a6f2f7b80cf35b58",
+    "03c72ba8d605e770",
+    "3c835dc0d9441fa5"
+   ],
+   "wasted_tokens": 19064,
+   "est_savings": 0.09532000000000002
+  },
+  {
+   "detector": "idle_run",
+   "trace_id": "aaf915310200b1f08768a84fa76afde6",
+   "agent": "research-agent",
+   "severity": "medium",
+   "title": "Idle run: 4305 tokens, no tool calls",
+   "evidence": "1 LLM call(s), 4278 input tokens, 0 tool calls, output says 'nothing to report'. A cheap non-LLM pre-check (e.g. 'anything changed since last run?') could skip this run entirely",
+   "span_ids": [
+    "a9d3d7c7ee87905e"
+   ],
+   "wasted_tokens": 4305,
+   "est_savings": 0.013158
+  },
+  {
+   "detector": "idle_run",
+   "trace_id": "c35b1c8c0a4c9f7f9384ec2b44feacae",
+   "agent": "faq-bot",
+   "severity": "medium",
+   "title": "Idle run: 876 tokens, no tool calls",
+   "evidence": "1 LLM call(s), 851 input tokens, 0 tool calls, only 25 output tokens. A cheap non-LLM pre-check (e.g. 'anything changed since last run?') could skip this run entirely",
+   "span_ids": [
+    "a6c9537f84dad06a"
+   ],
+   "wasted_tokens": 876,
+   "est_savings": 9.510000000000001e-05
+  },
+  {
+   "detector": "prompt_bloat",
+   "trace_id": "a81fdec3279c658a36760ce581e5c9f6",
+   "agent": "support-agent",
+   "severity": "high",
+   "title": "Prompt grew 9.3x over 7 LLM calls",
+   "evidence": "input tokens 2141 -> 19999 (9.3x, threshold 2.5x), grew on 6/6 steps. Savings assume compaction removes 50% of the growth",
+   "span_ids": [
+    "8e676a01d86a6460",
+    "47503f1dc33a1f6c",
+    "6dda4f8dcea60f4c",
+    "c4767556f97be2dd",
+    "accb461a9d132363",
+    "9be7173706b89231",
+    "b18753e6d4578ad9"
+   ],
+   "wasted_tokens": 29869,
+   "est_savings": 0.149345
+  },
+  {
+   "detector": "prompt_bloat",
+   "trace_id": "9136f1f8f31046dc6202bee65cb5e69c",
+   "agent": "research-agent",
+   "severity": "high",
+   "title": "Prompt grew 6.6x over 8 LLM calls",
+   "evidence": "input tokens 3206 -> 21087 (6.6x, threshold 2.5x), grew on 7/7 steps. Savings assume compaction removes 50% of the growth",
+   "span_ids": [
+    "5ef787b8f2e6195f",
+    "13aec376c359810a",
+    "5df06e8c878aaed9",
+    "f5e4a4713fe68c9c",
+    "2fa0d842bc55300b",
+    "e9ddebf563119aca",
+    "c66412854303cbc1",
+    "36ee1640723ef466"
+   ],
+   "wasted_tokens": 36130,
+   "est_savings": 0.10839
+  },
+  {
+   "detector": "idle_run",
+   "trace_id": "54a7b69b1cd66b09cf0e6d2b315c167a",
+   "agent": "ops-heartbeat",
+   "severity": "medium",
+   "title": "Idle run: 2932 tokens, no tool calls",
+   "evidence": "1 LLM call(s), 2899 input tokens, 0 tool calls, only 33 output tokens. A cheap non-LLM pre-check (e.g. 'anything changed since last run?') could skip this run entirely",
+   "span_ids": [
+    "41dc1c60a5f60735"
+   ],
+   "wasted_tokens": 2932,
+   "est_savings": 0.009093
+  },
+  {
+   "detector": "oversized_model",
+   "trace_id": "39b02e2ad96e684f3db0174e7938878a",
+   "agent": "support-agent",
+   "severity": "low",
+   "title": "2 trivial steps on large model orion-large",
+   "evidence": "2 calls with <= 600 input and <= 50 output tokens ran on a large-tier model; routing them to orion-mini would cost less",
+   "span_ids": [
+    "ce4758be24f43c62",
+    "ea2c7a517688d11f"
+   ],
+   "wasted_tokens": 0,
+   "est_savings": 0.0030307
+  },
+  {
+   "detector": "oversized_model",
+   "trace_id": "ae84b81c2e0fb5b38bae591eff4cc10f",
+   "agent": "research-agent",
+   "severity": "low",
+   "title": "5 trivial steps on large model vega-pro",
+   "evidence": "5 calls with <= 600 input and <= 50 output tokens ran on a large-tier model; routing them to vega-flash would cost less",
+   "span_ids": [
+    "ba2aa7baf3f81c31",
+    "cc351e4f703e957f",
+    "d908a121d1a7ba20",
+    "23a13e207fd255ee",
+    "2775ee42a89e22f2"
+   ],
+   "wasted_tokens": 0,
+   "est_savings": 0.006861399999999999
+  },
+  {
+   "detector": "oversized_model",
+   "trace_id": "2c591da8fff96acfee4205eea52fc3ec",
+   "agent": "ops-heartbeat",
+   "severity": "low",
+   "title": "2 trivial steps on large model vega-pro",
+   "evidence": "2 calls with <= 600 input and <= 50 output tokens ran on a large-tier model; routing them to vega-flash would cost less",
+   "span_ids": [
+    "23ea795649f1137d",
+    "508850d32fe5b140"
+   ],
+   "wasted_tokens": 0,
+   "est_savings": 0.003451
+  },
+  {
+   "detector": "oversized_model",
+   "trace_id": "ae13591e84fa4c7239e7a4f197fb613a",
+   "agent": "support-agent",
+   "severity": "low",
+   "title": "4 trivial steps on large model orion-large",
+   "evidence": "4 calls with <= 600 input and <= 50 output tokens ran on a large-tier model; routing them to orion-mini would cost less",
+   "span_ids": [
+    "57f479b5b212a6ee",
+    "7a4a902f21d63b0f",
+    "5e1885c35037cd6b",
+    "4c9bff5ce1887eaf"
+   ],
+   "wasted_tokens": 0,
+   "est_savings": 0.0077602999999999995
+  },
+  {
+   "detector": "tool_loop",
+   "trace_id": "681134e250647c59774f63547316ce64",
+   "agent": "sql-analyst",
+   "severity": "medium",
+   "title": "run_sql called 5x with identical arguments",
+   "evidence": "tool=run_sql args={\"query\": \"run_sql-111614411\"} repeated 5 times (threshold 3); 4 calls and 4 deciding LLM calls are redundant",
+   "span_ids": [
+    "370b9a290a530df9",
+    "25f88c7453ea4919",
+    "f7e9101d3f8b4433",
+    "0c880714837217e0",
+    "d1f16485429a4a7c"
+   ],
+   "wasted_tokens": 17816,
+   "est_savings": 0.09109
+  },
+  {
+   "detector": "oversized_model",
+   "trace_id": "4d407b285628ddcd19dd3e8c96053035",
+   "agent": "support-agent",
+   "severity": "low",
+   "title": "5 trivial steps on large model orion-large",
+   "evidence": "5 calls with <= 600 input and <= 50 output tokens ran on a large-tier model; routing them to orion-mini would cost less",
+   "span_ids": [
+    "f2dd9456bb7b6c05",
+    "a630ad9d7cb923f5",
+    "b18d2c8c8fddbebc",
+    "392612e95b58eb49",
+    "b0416f19bbe71835"
+   ],
+   "wasted_tokens": 0,
+   "est_savings": 0.008896399999999999
+  },
+  {
+   "detector": "tool_loop",
+   "trace_id": "331de35c7af6cd4199a7b99ba005f5e1",
+   "agent": "support-agent",
+   "severity": "medium",
+   "title": "create_ticket called 5x with identical arguments",
+   "evidence": "tool=create_ticket args={\"query\": \"create_ticket-275584367\"} repeated 5 times (threshold 3); 4 calls and 4 deciding LLM calls are redundant",
+   "span_ids": [
+    "c8edabdd4ef03f80",
+    "e516b0d47d3572cc",
+    "a4515ae01754bf08",
+    "5efb336e2f546033",
+    "2fc3e6495e911b91"
+   ],
+   "wasted_tokens": 15583,
+   "est_savings": 0.079735
+  },
+  {
+   "detector": "idle_run",
+   "trace_id": "62305d271a4b160621019bff4fe54745",
+   "agent": "research-agent",
+   "severity": "medium",
+   "title": "Idle run: 3854 tokens, no tool calls",
+   "evidence": "1 LLM call(s), 3838 input tokens, 0 tool calls, output says 'nothing happened'. A cheap non-LLM pre-check (e.g. 'anything changed since last run?') could skip this run entirely",
+   "span_ids": [
+    "10b6a6622ac1d5ca"
+   ],
+   "wasted_tokens": 3854,
+   "est_savings": 0.011706
+  },
+  {
+   "detector": "idle_run",
+   "trace_id": "b9493906939f44ebbe5e215ec47cc30b",
+   "agent": "ops-heartbeat",
+   "severity": "medium",
+   "title": "Idle run: 1909 tokens, no tool calls",
+   "evidence": "1 LLM call(s), 1901 input tokens, 0 tool calls, output says 'nothing to report'. A cheap non-LLM pre-check (e.g. 'anything changed since last run?') could skip this run entirely",
+   "span_ids": [
+    "569adef0df865633"
+   ],
+   "wasted_tokens": 1909,
+   "est_savings": 0.005799
+  },
+  {
+   "detector": "oversized_model",
+   "trace_id": "1e4ae3a7d123f7c1b7a1267e9a1e0036",
+   "agent": "ops-heartbeat",
+   "severity": "low",
+   "title": "4 trivial steps on large model vega-pro",
+   "evidence": "4 calls with <= 600 input and <= 50 output tokens ran on a large-tier model; routing them to vega-flash would cost less",
+   "span_ids": [
+    "54899c37cfa9026b",
+    "7aa1219a7a9398bb",
+    "6930b0c4d5576899",
+    "3e612d6605bf0618"
+   ],
+   "wasted_tokens": 0,
+   "est_savings": 0.0051707
+  },
+  {
+   "detector": "prompt_bloat",
+   "trace_id": "3abf9c656dd013f387a20e22b298b811",
+   "agent": "sql-analyst",
+   "severity": "high",
+   "title": "Prompt grew 7.1x over 5 LLM calls",
+   "evidence": "input tokens 1914 -> 13504 (7.1x, threshold 2.5x), grew on 4/4 steps. Savings assume compaction removes 50% of the growth",
+   "span_ids": [
+    "59bb89006198b718",
+    "e869707cbdcbfffc",
+    "937ca77cb25b6de7",
+    "412817eb224629cd",
+    "e8fb5a963b85f6e1"
+   ],
+   "wasted_tokens": 12965,
+   "est_savings": 0.064825
+  },
+  {
+   "detector": "tool_loop",
+   "trace_id": "0f5e8b4729d0c613b0c7700219566990",
+   "agent": "sql-analyst",
+   "severity": "medium",
+   "title": "render_chart called 4x with identical arguments",
+   "evidence": "tool=render_chart args={\"query\": \"render_chart-589015468\"} repeated 4 times (threshold 3); 3 calls and 3 deciding LLM calls are redundant",
+   "span_ids": [
+    "cf5d337fee8d5daa",
+    "696929b20513eda8",
+    "adf9568bde0bde18",
+    "93acb00e32eeeb38"
+   ],
+   "wasted_tokens": 12536,
+   "est_savings": 0.06395
+  },
+  {
+   "detector": "idle_run",
+   "trace_id": "62821d613fbbff57b6f56f1cc4a531cd",
+   "agent": "research-agent",
+   "severity": "medium",
+   "title": "Idle run: 4996 tokens, no tool calls",
+   "evidence": "1 LLM call(s), 4925 input tokens, 0 tool calls, output says 'nothing to report'. A cheap non-LLM pre-check (e.g. 'anything changed since last run?') could skip this run entirely",
+   "span_ids": [
+    "bcd499753f46057b"
+   ],
+   "wasted_tokens": 4996,
+   "est_savings": 0.015627
+  },
+  {
+   "detector": "oversized_model",
+   "trace_id": "a0154d6591ed554a3faeef01a8290f3c",
+   "agent": "support-agent",
+   "severity": "low",
+   "title": "3 trivial steps on large model orion-large",
+   "evidence": "3 calls with <= 600 input and <= 50 output tokens ran on a large-tier model; routing them to orion-mini would cost less",
+   "span_ids": [
+    "8ee25e54bfcb3388",
+    "bf00f56c6a4989a6",
+    "cadec3792ab403f6"
+   ],
+   "wasted_tokens": 0,
+   "est_savings": 0.006516000000000001
+  },
+  {
+   "detector": "retry_storm",
+   "trace_id": "e12ff6cdd6eaf269514e13532f237c4d",
+   "agent": "ops-heartbeat",
+   "severity": "high",
+   "title": "7 consecutive failures on llm:vega-pro",
+   "evidence": "7 failed attempts in a row on llm:vega-pro (threshold 3); median gap between attempts 249 ms; errors: RateLimitError; looks like no backoff",
+   "span_ids": [
+    "f610f40d69fe890f",
+    "4da838b76947cbac",
+    "bee047627168bdec",
+    "d25ad576ef0b743e",
+    "a3086e48e4e5b5b0",
+    "bd03d33beee9795e",
+    "26e6a84a46178161"
+   ],
+   "wasted_tokens": 0,
+   "est_savings": 0.0
+  },
+  {
+   "detector": "oversized_model",
+   "trace_id": "e12ff6cdd6eaf269514e13532f237c4d",
+   "agent": "ops-heartbeat",
+   "severity": "low",
+   "title": "4 trivial steps on large model vega-pro",
+   "evidence": "4 calls with <= 600 input and <= 50 output tokens ran on a large-tier model; routing them to vega-flash would cost less",
+   "span_ids": [
+    "51958000c3f38c8c",
+    "06b4ed272f4b8be8",
+    "9b08e5a844511ba0",
+    "9cc3c1f59129bc75"
+   ],
+   "wasted_tokens": 0,
+   "est_savings": 0.005046
+  },
+  {
+   "detector": "oversized_model",
+   "trace_id": "123cf9112bd8ad4d3eacdb2892f71993",
+   "agent": "ops-heartbeat",
+   "severity": "low",
+   "title": "3 trivial steps on large model vega-pro",
+   "evidence": "3 calls with <= 600 input and <= 50 output tokens ran on a large-tier model; routing them to vega-flash would cost less",
+   "span_ids": [
+    "7192e4438a6342ca",
+    "214c87b10cfc6420",
+    "1b1e06c30ceaaf73"
+   ],
+   "wasted_tokens": 0,
+   "est_savings": 0.0039092
+  },
+  {
+   "detector": "oversized_model",
+   "trace_id": "c9abda915674b9e20e5995aa56db638a",
+   "agent": "sql-analyst",
+   "severity": "low",
+   "title": "4 trivial steps on large model orion-large",
+   "evidence": "4 calls with <= 600 input and <= 50 output tokens ran on a large-tier model; routing them to orion-mini would cost less",
+   "span_ids": [
+    "36308a601e4182bb",
+    "f0a9b97f7557c28c",
+    "bdb58d062621d32d",
+    "bc4716ad0970d09d"
+   ],
+   "wasted_tokens": 0,
+   "est_savings": 0.0084222
+  },
+  {
+   "detector": "idle_run",
+   "trace_id": "ed8a028c3756999b251adf0e6f94da50",
+   "agent": "ops-heartbeat",
+   "severity": "medium",
+   "title": "Idle run: 5686 tokens, no tool calls",
+   "evidence": "1 LLM call(s), 5658 input tokens, 0 tool calls, only 28 output tokens. A cheap non-LLM pre-check (e.g. 'anything changed since last run?') could skip this run entirely",
+   "span_ids": [
+    "5f9cb7e06328143e"
+   ],
+   "wasted_tokens": 5686,
+   "est_savings": 0.01731
+  },
+  {
+   "detector": "idle_run",
+   "trace_id": "296be9034e09c596ab45eaf07ad30e2a",
+   "agent": "research-agent",
+   "severity": "medium",
+   "title": "Idle run: 3775 tokens, no tool calls",
+   "evidence": "1 LLM call(s), 3758 input tokens, 0 tool calls, output says 'nothing to report'. A cheap non-LLM pre-check (e.g. 'anything changed since last run?') could skip this run entirely",
+   "span_ids": [
+    "956abfdfbf4e2e46"
+   ],
+   "wasted_tokens": 3775,
+   "est_savings": 0.011478
+  },
+  {
+   "detector": "tool_loop",
+   "trace_id": "4da08e483531518a24c58b47160934d1",
+   "agent": "support-agent",
+   "severity": "high",
+   "title": "get_order called 6x with identical arguments",
+   "evidence": "tool=get_order args={\"query\": \"get_order-825190103\"} repeated 6 times (threshold 3); 5 calls and 5 deciding LLM calls are redundant",
+   "span_ids": [
+    "9736bb4ff5c8ce3c",
+    "01b1c62616a48bfa",
+    "45f8e14dea16ce6e",
+    "764d7e7c8e49d0f9",
+    "ea350f17c157a761",
+    "d5108bc02f9e1ddb"
+   ],
+   "wasted_tokens": 12922,
+   "est_savings": 0.06727
+  },
+  {
+   "detector": "idle_run",
+   "trace_id": "1114e0daf87ae6defe8c9aab7e388a19",
+   "agent": "research-agent",
+   "severity": "medium",
+   "title": "Idle run: 3826 tokens, no tool calls",
+   "evidence": "1 LLM call(s), 3804 input tokens, 0 tool calls, output says 'nothing to report'. A cheap non-LLM pre-check (e.g. 'anything changed since last run?') could skip this run entirely",
+   "span_ids": [
+    "7b011fdd94c0b9e0"
+   ],
+   "wasted_tokens": 3826,
+   "est_savings": 0.011676
+  },
+  {
+   "detector": "prompt_bloat",
+   "trace_id": "3427e46617f4b85d597faaf01fa7cddf",
+   "agent": "sql-analyst",
+   "severity": "high",
+   "title": "Prompt grew 5.5x over 5 LLM calls",
+   "evidence": "input tokens 2764 -> 15195 (5.5x, threshold 2.5x), grew on 4/4 steps. Savings assume compaction removes 50% of the growth",
+   "span_ids": [
+    "45d5aacbd294100f",
+    "95635c97365f982b",
+    "86a8f21a010e622b",
+    "6a9a6f4b2e39c29a",
+    "c4ac41b53f042c7b"
+   ],
+   "wasted_tokens": 15760,
+   "est_savings": 0.07880000000000001
+  },
+  {
+   "detector": "oversized_model",
+   "trace_id": "3427e46617f4b85d597faaf01fa7cddf",
+   "agent": "sql-analyst",
+   "severity": "low",
+   "title": "2 trivial steps on large model orion-large",
+   "evidence": "2 calls with <= 600 input and <= 50 output tokens ran on a large-tier model; routing them to orion-mini would cost less",
+   "span_ids": [
+    "823ca34abffbd93b",
+    "95eef45ca9c3640d"
+   ],
+   "wasted_tokens": 0,
+   "est_savings": 0.0043081000000000005
+  },
+  {
+   "detector": "tool_loop",
+   "trace_id": "0bf2fb51c4f5b03e5af1128cc8ee46bf",
+   "agent": "sql-analyst",
+   "severity": "medium",
+   "title": "run_sql called 5x with identical arguments",
+   "evidence": "tool=run_sql args={\"query\": \"run_sql-776309974\"} repeated 5 times (threshold 3); 4 calls and 4 deciding LLM calls are redundant",
+   "span_ids": [
+    "c179c596d772e63e",
+    "c81a5f0f1b1bba94",
+    "dbbf46edc83b6467",
+    "8ffe38c9d2d81eb3",
+    "2ac38bd31afc388c"
+   ],
+   "wasted_tokens": 20847,
+   "est_savings": 0.106395
+  },
+  {
+   "detector": "idle_run",
+   "trace_id": "d59f2b6979a8832f60971a15c80682d3",
+   "agent": "ops-heartbeat",
+   "severity": "medium",
+   "title": "Idle run: 4709 tokens, no tool calls",
+   "evidence": "2 LLM call(s), 4696 input tokens, 0 tool calls, output says 'no action'. A cheap non-LLM pre-check (e.g. 'anything changed since last run?') could skip this run entirely",
+   "span_ids": [
+    "c30f3c6921ffcf72",
+    "813834472376324f"
+   ],
+   "wasted_tokens": 4709,
+   "est_savings": 0.013121699999999998
+  },
+  {
+   "detector": "oversized_model",
+   "trace_id": "e04872dc744d24421ad74fd4298b2e78",
+   "agent": "ops-heartbeat",
+   "severity": "low",
+   "title": "4 trivial steps on large model vega-pro",
+   "evidence": "4 calls with <= 600 input and <= 50 output tokens ran on a large-tier model; routing them to vega-flash would cost less",
+   "span_ids": [
+    "382afbde7ef55011",
+    "00f24a96eb821435",
+    "9fb938e0776ef3e6",
+    "3d305a0736903edb"
+   ],
+   "wasted_tokens": 0,
+   "est_savings": 0.0047009
+  },
+  {
+   "detector": "tool_loop",
+   "trace_id": "627967a3753439c06e9c92babbb5e037",
+   "agent": "sql-analyst",
+   "severity": "medium",
+   "title": "describe_table called 5x with identical arguments",
+   "evidence": "tool=describe_table args={\"query\": \"describe_table-100117307\"} repeated 5 times (threshold 3); 4 calls and 4 deciding LLM calls are redundant",
+   "span_ids": [
+    "f2189128b2da61f7",
+    "dedbaec4e2b2de4b",
+    "a0ca0f8ee1ef2dd3",
+    "ea92659baaaa077f",
+    "b8efd250b9fe60c6"
+   ],
+   "wasted_tokens": 15210,
+   "est_savings": 0.07751
+  },
+  {
+   "detector": "idle_run",
+   "trace_id": "9b247a558fe88b776009a05a48817b98",
+   "agent": "ops-heartbeat",
+   "severity": "medium",
+   "title": "Idle run: 3920 tokens, no tool calls",
+   "evidence": "1 LLM call(s), 3907 input tokens, 0 tool calls, output says 'nothing happened'. A cheap non-LLM pre-check (e.g. 'anything changed since last run?') could skip this run entirely",
+   "span_ids": [
+    "b701492522fbe906"
+   ],
+   "wasted_tokens": 3920,
+   "est_savings": 0.011877
+  },
+  {
+   "detector": "idle_run",
+   "trace_id": "e28f553768a64d97123c6a29969b6b4b",
+   "agent": "research-agent",
+   "severity": "medium",
+   "title": "Idle run: 4975 tokens, no tool calls",
+   "evidence": "1 LLM call(s), 4946 input tokens, 0 tool calls, only 29 output tokens. A cheap non-LLM pre-check (e.g. 'anything changed since last run?') could skip this run entirely",
+   "span_ids": [
+    "eea00af96283f50f"
+   ],
+   "wasted_tokens": 4975,
+   "est_savings": 0.015186
+  },
+  {
+   "detector": "idle_run",
+   "trace_id": "b37bdb9931f18f8bec4de885b245b7d9",
+   "agent": "faq-bot",
+   "severity": "medium",
+   "title": "Idle run: 688 tokens, no tool calls",
+   "evidence": "1 LLM call(s), 650 input tokens, 0 tool calls, only 38 output tokens. A cheap non-LLM pre-check (e.g. 'anything changed since last run?') could skip this run entirely",
+   "span_ids": [
+    "2182b51818e9ef77"
+   ],
+   "wasted_tokens": 688,
+   "est_savings": 8.02e-05
+  },
+  {
+   "detector": "idle_run",
+   "trace_id": "0485742a6d22313c256df639edd9636e",
+   "agent": "research-agent",
+   "severity": "medium",
+   "title": "Idle run: 5100 tokens, no tool calls",
+   "evidence": "1 LLM call(s), 5087 input tokens, 0 tool calls, output says 'nothing happened'. A cheap non-LLM pre-check (e.g. 'anything changed since last run?') could skip this run entirely",
+   "span_ids": [
+    "0d0b6920dd460c91"
+   ],
+   "wasted_tokens": 5100,
+   "est_savings": 0.015417
+  },
+  {
+   "detector": "prompt_bloat",
+   "trace_id": "759a97252e77abe37ef74fdb17fc2335",
+   "agent": "sql-analyst",
+   "severity": "high",
+   "title": "Prompt grew 10.1x over 8 LLM calls",
+   "evidence": "input tokens 2189 -> 22145 (10.1x, threshold 2.5x), grew on 7/7 steps. Savings assume compaction removes 50% of the growth",
+   "span_ids": [
+    "f17fb7867d929cc0",
+    "48340d51a5c6c5ae",
+    "e29ff19c29b50942",
+    "aff745a064ea1dd3",
+    "24bde1a811c7bec9",
+    "747c76903ec8f48e",
+    "670a858cf86b2e95",
+    "232585b486daf596"
+   ],
+   "wasted_tokens": 41184,
+   "est_savings": 0.20592
+  },
+  {
+   "detector": "oversized_model",
+   "trace_id": "55b8572087cd94446dba97542d95d98d",
+   "agent": "ops-heartbeat",
+   "severity": "low",
+   "title": "2 trivial steps on large model vega-pro",
+   "evidence": "2 calls with <= 600 input and <= 50 output tokens ran on a large-tier model; routing them to vega-flash would cost less",
+   "span_ids": [
+    "2674d1ff6cdcd3be",
+    "d14bc7719ff0287a"
+   ],
+   "wasted_tokens": 0,
+   "est_savings": 0.0022736
+  },
+  {
+   "detector": "tool_loop",
+   "trace_id": "05ec8e9fa09fc70024ce1460ef5a9491",
+   "agent": "ops-heartbeat",
+   "severity": "medium",
+   "title": "check_status called 3x with identical arguments",
+   "evidence": "tool=check_status args={\"service\": \"payments-api\"} repeated 3 times (threshold 3); 2 calls and 1 deciding LLM calls are redundant",
+   "span_ids": [
+    "1b6960311f683d6f",
+    "484f7f7c244f52f4",
+    "e504d1c64312153d"
+   ],
+   "wasted_tokens": 2359,
+   "est_savings": 0.00912
+  },
+  {
+   "detector": "tool_loop",
+   "trace_id": "7c260521ce3ce7ce01a6c260efc08273",
+   "agent": "ops-heartbeat",
+   "severity": "high",
+   "title": "check_status called 6x with identical arguments",
+   "evidence": "tool=check_status args={\"query\": \"check_status-628380380\"} repeated 6 times (threshold 3); 5 calls and 5 deciding LLM calls are redundant",
+   "span_ids": [
+    "e14110b69a920655",
+    "3f48e5f018cc0e29",
+    "064fe16479472ea4",
+    "6405d362719deadd",
+    "4cc7cda21f2f087d",
+    "2f1d80eafb91fb90"
+   ],
+   "wasted_tokens": 11971,
+   "est_savings": 0.037848
+  },
+  {
+   "detector": "retry_storm",
+   "trace_id": "7c260521ce3ce7ce01a6c260efc08273",
+   "agent": "ops-heartbeat",
+   "severity": "high",
+   "title": "6 consecutive failures on tool:notify_oncall",
+   "evidence": "6 failed attempts in a row on tool:notify_oncall (threshold 3); median gap between attempts 1317 ms; errors: TimeoutError",
+   "span_ids": [
+    "d904b887d77b03b3",
+    "9cddd7c2d25a0b3f",
+    "a87d2106dbfbfea4",
+    "257066e86eaebb60",
+    "24458bad2f4f914c",
+    "3d9d542aa84fa67f"
+   ],
+   "wasted_tokens": 15601,
+   "est_savings": 0.048387
+  },
+  {
+   "detector": "idle_run",
+   "trace_id": "cd35637c234bae09da79d6868f06c963",
+   "agent": "research-agent",
+   "severity": "medium",
+   "title": "Idle run: 5919 tokens, no tool calls",
+   "evidence": "1 LLM call(s), 5902 input tokens, 0 tool calls, output says 'nothing to report'. A cheap non-LLM pre-check (e.g. 'anything changed since last run?') could skip this run entirely",
+   "span_ids": [
+    "604948bea01ed90e"
+   ],
+   "wasted_tokens": 5919,
+   "est_savings": 0.01791
+  },
+  {
+   "detector": "idle_run",
+   "trace_id": "9cc862cdbd4211d1992033eb6a8eb758",
+   "agent": "research-agent",
+   "severity": "medium",
+   "title": "Idle run: 2096 tokens, no tool calls",
+   "evidence": "1 LLM call(s), 2089 input tokens, 0 tool calls, output says 'nothing happened'. A cheap non-LLM pre-check (e.g. 'anything changed since last run?') could skip this run entirely",
+   "span_ids": [
+    "f2546c177a90c486"
+   ],
+   "wasted_tokens": 2096,
+   "est_savings": 0.006351
+  },
+  {
+   "detector": "oversized_model",
+   "trace_id": "485835db2e3b5fd6704532d5207073f0",
+   "agent": "support-agent",
+   "severity": "low",
+   "title": "2 trivial steps on large model orion-large",
+   "evidence": "2 calls with <= 600 input and <= 50 output tokens ran on a large-tier model; routing them to orion-mini would cost less",
+   "span_ids": [
+    "3e86cc14e3f2df80",
+    "7a8c2c3665d77163"
+   ],
+   "wasted_tokens": 0,
+   "est_savings": 0.0040266
+  },
+  {
+   "detector": "oversized_model",
+   "trace_id": "5366e938343c17523caaa31e13d3c726",
+   "agent": "support-agent",
+   "severity": "low",
+   "title": "4 trivial steps on large model orion-large",
+   "evidence": "4 calls with <= 600 input and <= 50 output tokens ran on a large-tier model; routing them to orion-mini would cost less",
+   "span_ids": [
+    "ae5714e8d29c0131",
+    "1246d2a56a7cfd08",
+    "065262a224a0db6e",
+    "e5bb7f3b687bb3ce"
+   ],
+   "wasted_tokens": 0,
+   "est_savings": 0.0084861
+  },
+  {
+   "detector": "prompt_bloat",
+   "trace_id": "20a0c2445ab7d8b26c1fb2fce77d9bec",
+   "agent": "research-agent",
+   "severity": "high",
+   "title": "Prompt grew 6.9x over 8 LLM calls",
+   "evidence": "input tokens 3710 -> 25685 (6.9x, threshold 2.5x), grew on 7/7 steps. Savings assume compaction removes 50% of the growth",
+   "span_ids": [
+    "1e78ba024b1bbb3a",
+    "e5fa855dd3208f77",
+    "9ddb6fea9bd7871c",
+    "0b94b2abb8e0c2e1",
+    "5ade80d4ebb48c9e",
+    "68ac039ce921f231",
+    "d5b5c24cbd9e5993",
+    "7a239f3cc1f6028b"
+   ],
+   "wasted_tokens": 48247,
+   "est_savings": 0.144741
+  },
+  {
+   "detector": "oversized_model",
+   "trace_id": "cb508544b481acdeeeafab5619b65b6b",
+   "agent": "support-agent",
+   "severity": "low",
+   "title": "3 trivial steps on large model orion-large",
+   "evidence": "3 calls with <= 600 input and <= 50 output tokens ran on a large-tier model; routing them to orion-mini would cost less",
+   "span_ids": [
+    "8ee43f7fd7680657",
+    "3ef433df020a5c40",
+    "961a9968230a37e5"
+   ],
+   "wasted_tokens": 0,
+   "est_savings": 0.0050415
+  },
+  {
+   "detector": "idle_run",
+   "trace_id": "e0bd60442e18b22bf44f5031a82d4879",
+   "agent": "ops-heartbeat",
+   "severity": "medium",
+   "title": "Idle run: 3807 tokens, no tool calls",
+   "evidence": "1 LLM call(s), 3722 input tokens, 0 tool calls, output says 'nothing to report'. A cheap non-LLM pre-check (e.g. 'anything changed since last run?') could skip this run entirely",
+   "span_ids": [
+    "4ac81bdae0028f9a"
+   ],
+   "wasted_tokens": 3807,
+   "est_savings": 0.012186
+  },
+  {
+   "detector": "tool_loop",
+   "trace_id": "7458d92ca1da7c7a9b8826edff4a9185",
+   "agent": "research-agent",
+   "severity": "medium",
+   "title": "summarize_doc called 3x with identical arguments",
+   "evidence": "tool=summarize_doc args={\"query\": \"summarize_doc-210277396\"} repeated 3 times (threshold 3); 2 calls and 2 deciding LLM calls are redundant",
+   "span_ids": [
+    "def42b392d49d235",
+    "6b691bd21533fe82",
+    "0e5929491e92c0ae"
+   ],
+   "wasted_tokens": 11193,
+   "est_savings": 0.034353
+  },
+  {
+   "detector": "tool_loop",
+   "trace_id": "c08608612fa83aa48bf9a66d7782e83f",
+   "agent": "support-agent",
+   "severity": "medium",
+   "title": "create_ticket called 5x with identical arguments",
+   "evidence": "tool=create_ticket args={\"query\": \"create_ticket-374584711\"} repeated 5 times (threshold 3); 4 calls and 4 deciding LLM calls are redundant",
+   "span_ids": [
+    "6f5a181ab1caa64c",
+    "d58757a3793c04f7",
+    "5f8b00f7b92eefe0",
+    "adb5d5e67b88e4ef",
+    "f884195d0a45e44d"
+   ],
+   "wasted_tokens": 11974,
+   "est_savings": 0.062150000000000004
+  },
+  {
+   "detector": "retry_storm",
+   "trace_id": "7e52c22ca2070bf3250768f2ba0ebd56",
+   "agent": "support-agent",
+   "severity": "medium",
+   "title": "4 consecutive failures on tool:get_order",
+   "evidence": "4 failed attempts in a row on tool:get_order (threshold 3); median gap between attempts 1383 ms; errors: ConnectionError",
+   "span_ids": [
+    "5f6f83c5539b4d73",
+    "fa1267979bfe970a",
+    "e1cd2b70cffe7547",
+    "faf2be80833bde78"
+   ],
+   "wasted_tokens": 10651,
+   "est_savings": 0.054165000000000005
+  },
+  {
+   "detector": "oversized_model",
+   "trace_id": "a469db2c1e8343bf23e8bb0505ec647e",
+   "agent": "research-agent",
+   "severity": "low",
+   "title": "2 trivial steps on large model vega-pro",
+   "evidence": "2 calls with <= 600 input and <= 50 output tokens ran on a large-tier model; routing them to vega-flash would cost less",
+   "span_ids": [
+    "e9b9339e0f6eed31",
+    "ca46739f53badc3e"
+   ],
+   "wasted_tokens": 0,
+   "est_savings": 0.0029551
+  },
+  {
+   "detector": "oversized_model",
+   "trace_id": "7e2840a17a506f6018ad8eebb7607067",
+   "agent": "ops-heartbeat",
+   "severity": "low",
+   "title": "2 trivial steps on large model vega-pro",
+   "evidence": "2 calls with <= 600 input and <= 50 output tokens ran on a large-tier model; routing them to vega-flash would cost less",
+   "span_ids": [
+    "83c59c143824c62b",
+    "a8c1fb6439bdc3ed"
+   ],
+   "wasted_tokens": 0,
+   "est_savings": 0.0024621
+  },
+  {
+   "detector": "idle_run",
+   "trace_id": "6d0879b4776e3a29a07c68c21ce2ec5b",
+   "agent": "faq-bot",
+   "severity": "medium",
+   "title": "Idle run: 558 tokens, no tool calls",
+   "evidence": "1 LLM call(s), 528 input tokens, 0 tool calls, only 30 output tokens. A cheap non-LLM pre-check (e.g. 'anything changed since last run?') could skip this run entirely",
+   "span_ids": [
+    "dd91cf6bb1020282"
+   ],
+   "wasted_tokens": 558,
+   "est_savings": 6.480000000000002e-05
+  },
+  {
+   "detector": "idle_run",
+   "trace_id": "d61782cbaabf1a086b6de0da542e2e6a",
+   "agent": "ops-heartbeat",
+   "severity": "medium",
+   "title": "Idle run: 4440 tokens, no tool calls",
+   "evidence": "2 LLM call(s), 4426 input tokens, 0 tool calls, output says 'nothing to report'. A cheap non-LLM pre-check (e.g. 'anything changed since last run?') could skip this run entirely",
+   "span_ids": [
+    "034f202915459b48",
+    "b68d6f3819e3b84f"
+   ],
+   "wasted_tokens": 4440,
+   "est_savings": 0.012300499999999999
+  },
+  {
+   "detector": "idle_run",
+   "trace_id": "e008e8ed3ecf5f0a380ec19dfbb713fd",
+   "agent": "ops-heartbeat",
+   "severity": "medium",
+   "title": "Idle run: 2028 tokens, no tool calls",
+   "evidence": "1 LLM call(s), 2015 input tokens, 0 tool calls, output says 'nothing to report'. A cheap non-LLM pre-check (e.g. 'anything changed since last run?') could skip this run entirely",
+   "span_ids": [
+    "3749af64cfc01fbc"
+   ],
+   "wasted_tokens": 2028,
+   "est_savings": 0.006201
+  },
+  {
+   "detector": "idle_run",
+   "trace_id": "5d9e17173f086a9e569db57e10c238ba",
+   "agent": "ops-heartbeat",
+   "severity": "medium",
+   "title": "Idle run: 5502 tokens, no tool calls",
+   "evidence": "1 LLM call(s), 5469 input tokens, 0 tool calls, only 33 output tokens. A cheap non-LLM pre-check (e.g. 'anything changed since last run?') could skip this run entirely",
+   "span_ids": [
+    "30370fff7da2fb48"
+   ],
+   "wasted_tokens": 5502,
+   "est_savings": 0.016803
+  },
+  {
+   "detector": "tool_loop",
+   "trace_id": "1bc6229e42f19c7b91f29ea4db029414",
+   "agent": "ops-heartbeat",
+   "severity": "high",
+   "title": "list_alerts called 8x with identical arguments",
+   "evidence": "tool=list_alerts args={\"query\": \"list_alerts-343930814\"} repeated 8 times (threshold 3); 7 calls and 7 deciding LLM calls are redundant",
+   "span_ids": [
+    "114126afce70d3f7",
+    "5ef36d4d9d85aa72",
+    "71287916248bd5aa",
+    "a9b24a990a8260b6",
+    "f979549bc44c5c78",
+    "b993b65f35ded447",
+    "03a3574a919cf735",
+    "dc07605e57628c84"
+   ],
+   "wasted_tokens": 23055,
+   "est_savings": 0.072378
+  },
+  {
+   "detector": "retry_storm",
+   "trace_id": "1bc6229e42f19c7b91f29ea4db029414",
+   "agent": "ops-heartbeat",
+   "severity": "high",
+   "title": "6 consecutive failures on llm:vega-pro",
+   "evidence": "6 failed attempts in a row on llm:vega-pro (threshold 3); median gap between attempts 185 ms; errors: Timeout; looks like no backoff",
+   "span_ids": [
+    "3366da877f7ac78c",
+    "84aa6e12208a9c4f",
+    "092351d9fedceb65",
+    "7a93ef0e780d90b6",
+    "1c8525101bfdf626",
+    "09bc6a803a887bed"
+   ],
+   "wasted_tokens": 10150,
+   "est_savings": 0.030449999999999998
+  },
+  {
+   "detector": "oversized_model",
+   "trace_id": "bb2168c4a3188a65496fe30824f7e239",
+   "agent": "support-agent",
+   "severity": "low",
+   "title": "4 trivial steps on large model orion-large",
+   "evidence": "4 calls with <= 600 input and <= 50 output tokens ran on a large-tier model; routing them to orion-mini would cost less",
+   "span_ids": [
+    "41d893a5ffc7aba2",
+    "6e8649f1055c22ad",
+    "e13ae6f4b5ef818b",
+    "da07f08e8a9fa5a1"
+   ],
+   "wasted_tokens": 0,
+   "est_savings": 0.00979
+  },
+  {
+   "detector": "oversized_model",
+   "trace_id": "60094db3b265293e45314fd0ac01e53d",
+   "agent": "support-agent",
+   "severity": "low",
+   "title": "5 trivial steps on large model orion-large",
+   "evidence": "5 calls with <= 600 input and <= 50 output tokens ran on a large-tier model; routing them to orion-mini would cost less",
+   "span_ids": [
+    "da8746db8338b815",
+    "c8bc1c88fe600c12",
+    "f1624df921e10ae8",
+    "7d23fd9a31621e95",
+    "eb34e953732af4e8"
+   ],
+   "wasted_tokens": 0,
+   "est_savings": 0.0077672
+  },
+  {
+   "detector": "oversized_model",
+   "trace_id": "43651cb8329dcf9ef9648a0f2d0490a7",
+   "agent": "ops-heartbeat",
+   "severity": "low",
+   "title": "2 trivial steps on large model vega-pro",
+   "evidence": "2 calls with <= 600 input and <= 50 output tokens ran on a large-tier model; routing them to vega-flash would cost less",
+   "span_ids": [
+    "f9046be7934fa5c8",
+    "5247a092d93eeb08"
+   ],
+   "wasted_tokens": 0,
+   "est_savings": 0.0020967
+  },
+  {
+   "detector": "idle_run",
+   "trace_id": "7f5085e7058cdd4432a02b53565a4a42",
+   "agent": "faq-bot",
+   "severity": "medium",
+   "title": "Idle run: 371 tokens, no tool calls",
+   "evidence": "1 LLM call(s), 347 input tokens, 0 tool calls, only 24 output tokens. A cheap non-LLM pre-check (e.g. 'anything changed since last run?') could skip this run entirely",
+   "span_ids": [
+    "f487b599d46c5776"
+   ],
+   "wasted_tokens": 371,
+   "est_savings": 4.4300000000000006e-05
+  },
+  {
+   "detector": "retry_storm",
+   "trace_id": "0f810db2bbc1686b4badb9731ed01243",
+   "agent": "sql-analyst",
+   "severity": "medium",
+   "title": "3 consecutive failures on tool:describe_table",
+   "evidence": "3 failed attempts in a row on tool:describe_table (threshold 3); median gap between attempts 1770 ms; errors: TimeoutError",
+   "span_ids": [
+    "d18ee31bb35d8adb",
+    "42d01a0b4c55542d",
+    "0678fe134bcd6e4d"
+   ],
+   "wasted_tokens": 6381,
+   "est_savings": 0.032755
+  },
+  {
+   "detector": "tool_loop",
+   "trace_id": "7ddee37debbaca662a4e4d28c0fce144",
+   "agent": "ops-heartbeat",
+   "severity": "medium",
+   "title": "check_status called 3x with identical arguments",
+   "evidence": "tool=check_status args={\"service\": \"payments-api\"} repeated 3 times (threshold 3); 2 calls and 1 deciding LLM calls are redundant",
+   "span_ids": [
+    "f0154f90db7be180",
+    "13e2738a3f9ee7b6",
+    "1b757ed19dca71ef"
+   ],
+   "wasted_tokens": 1927,
+   "est_savings": 0.006195
+  },
+  {
+   "detector": "retry_storm",
+   "trace_id": "7ddee37debbaca662a4e4d28c0fce144",
+   "agent": "ops-heartbeat",
+   "severity": "high",
+   "title": "5 consecutive failures on tool:check_status",
+   "evidence": "5 failed attempts in a row on tool:check_status (threshold 3); median gap between attempts 1506 ms; errors: ConnectionError",
+   "span_ids": [
+    "07fcb800da495408",
+    "02dec88fdb6f3ad4",
+    "00009f1eee1eedbf",
+    "ba8f3e6c61a4cd19",
+    "18e43d8528d42725"
+   ],
+   "wasted_tokens": 8454,
+   "est_savings": 0.026532
+  },
+  {
+   "detector": "idle_run",
+   "trace_id": "160a56e11cd27c9f03ac0d1b2cb15c02",
+   "agent": "ops-heartbeat",
+   "severity": "medium",
+   "title": "Idle run: 2065 tokens, no tool calls",
+   "evidence": "1 LLM call(s), 2048 input tokens, 0 tool calls, output says 'no action'. A cheap non-LLM pre-check (e.g. 'anything changed since last run?') could skip this run entirely",
+   "span_ids": [
+    "e2edbb63deaaacaa"
+   ],
+   "wasted_tokens": 2065,
+   "est_savings": 0.006348
+  },
+  {
+   "detector": "oversized_model",
+   "trace_id": "747738793eec05dc7660302f477eb375",
+   "agent": "support-agent",
+   "severity": "low",
+   "title": "4 trivial steps on large model orion-large",
+   "evidence": "4 calls with <= 600 input and <= 50 output tokens ran on a large-tier model; routing them to orion-mini would cost less",
+   "span_ids": [
+    "3f8b015eb6a35409",
+    "a3dff5f0297e86fe",
+    "609eee72fb9c7872",
+    "651fd429c1171668"
+   ],
+   "wasted_tokens": 0,
+   "est_savings": 0.0069762
+  },
+  {
+   "detector": "idle_run",
+   "trace_id": "6b56b091665c9da5be16064069a31ab6",
+   "agent": "research-agent",
+   "severity": "medium",
+   "title": "Idle run: 2819 tokens, no tool calls",
+   "evidence": "2 LLM call(s), 2794 input tokens, 0 tool calls, output says 'nothing happened'. A cheap non-LLM pre-check (e.g. 'anything changed since last run?') could skip this run entirely",
+   "span_ids": [
+    "3e14196514c4e22c",
+    "9f80bd12299606d2"
+   ],
+   "wasted_tokens": 2819,
+   "est_savings": 0.0080701
+  },
+  {
+   "detector": "oversized_model",
+   "trace_id": "a4f19126ee0c2cb51f63ed1f68edeed7",
+   "agent": "research-agent",
+   "severity": "low",
+   "title": "2 trivial steps on large model vega-pro",
+   "evidence": "2 calls with <= 600 input and <= 50 output tokens ran on a large-tier model; routing them to vega-flash would cost less",
+   "span_ids": [
+    "bab8ad708d57c064",
+    "e5455ccc35b39c0e"
+   ],
+   "wasted_tokens": 0,
+   "est_savings": 0.0029376999999999997
+  },
+  {
+   "detector": "oversized_model",
+   "trace_id": "f1c1d53bc229a415cb5f8951c534f723",
+   "agent": "research-agent",
+   "severity": "low",
+   "title": "4 trivial steps on large model vega-pro",
+   "evidence": "4 calls with <= 600 input and <= 50 output tokens ran on a large-tier model; routing them to vega-flash would cost less",
+   "span_ids": [
+    "c3d081781d05ddbf",
+    "56685b027387d896",
+    "c91654e6473eb4b1",
+    "2d28746a5a6df285"
+   ],
+   "wasted_tokens": 0,
+   "est_savings": 0.0042427
+  },
+  {
+   "detector": "oversized_model",
+   "trace_id": "9c6723382c110a436cc5599972f580bd",
+   "agent": "sql-analyst",
+   "severity": "low",
+   "title": "3 trivial steps on large model orion-large",
+   "evidence": "3 calls with <= 600 input and <= 50 output tokens ran on a large-tier model; routing them to orion-mini would cost less",
+   "span_ids": [
+    "50d3b1d6477809ce",
+    "323eba41052089dc",
+    "77019d4489131a4a"
+   ],
+   "wasted_tokens": 0,
+   "est_savings": 0.0057017000000000005
+  },
+  {
+   "detector": "prompt_bloat",
+   "trace_id": "b89b97223aa4ecd7c9e58ebc673d4de0",
+   "agent": "support-agent",
+   "severity": "high",
+   "title": "Prompt grew 7.2x over 6 LLM calls",
+   "evidence": "input tokens 2240 -> 16077 (7.2x, threshold 2.5x), grew on 5/5 steps. Savings assume compaction removes 50% of the growth",
+   "span_ids": [
+    "f58f56a031116b6a",
+    "05f4a2d0baafe28b",
+    "6094d74c7846e9c5",
+    "47a029aecac6a853",
+    "9361b11d8352aaba",
+    "8155db8487c5577f"
+   ],
+   "wasted_tokens": 20025,
+   "est_savings": 0.10012499999999999
+  },
+  {
+   "detector": "tool_loop",
+   "trace_id": "8bf63e19c88994e749ef10888ab72eb9",
+   "agent": "sql-analyst",
+   "severity": "high",
+   "title": "describe_table called 8x with identical arguments",
+   "evidence": "tool=describe_table args={\"query\": \"describe_table-737423590\"} repeated 8 times (threshold 3); 7 calls and 7 deciding LLM calls are redundant",
+   "span_ids": [
+    "a98d61ec3ad41c9a",
+    "f99a36206ee2f9bf",
+    "b1000314b77cff4c",
+    "4ab7d5e0f814af2e",
+    "e1eaf0f24c52b95c",
+    "bc44cb36d89c568d",
+    "a127f6638db4daaa",
+    "4897c6e21581f33e"
+   ],
+   "wasted_tokens": 25262,
+   "est_savings": 0.12913
+  },
+  {
+   "detector": "oversized_model",
+   "trace_id": "8bf63e19c88994e749ef10888ab72eb9",
+   "agent": "sql-analyst",
+   "severity": "low",
+   "title": "4 trivial steps on large model orion-large",
+   "evidence": "4 calls with <= 600 input and <= 50 output tokens ran on a large-tier model; routing them to orion-mini would cost less",
+   "span_ids": [
+    "e465aed7207ad1d4",
+    "09ac7ba5eb2873e6",
+    "9aec319ff38ef31f",
+    "73ad562d58c68877"
+   ],
+   "wasted_tokens": 0,
+   "est_savings": 0.006641299999999999
+  },
+  {
+   "detector": "prompt_bloat",
+   "trace_id": "aefb886b2212b446f39eab73a24a7b89",
+   "agent": "sql-analyst",
+   "severity": "high",
+   "title": "Prompt grew 6.7x over 6 LLM calls",
+   "evidence": "input tokens 1987 -> 13351 (6.7x, threshold 2.5x), grew on 5/5 steps. Savings assume compaction removes 50% of the growth",
+   "span_ids": [
+    "6431d4a9ca1ef8d9",
+    "ddc5522838e1e998",
+    "f5e1ab658bd296cc",
+    "ef3dc5a892958d18",
+    "2a17879a67a79886",
+    "ae372e39af396095"
+   ],
+   "wasted_tokens": 15784,
+   "est_savings": 0.07892
+  },
+  {
+   "detector": "idle_run",
+   "trace_id": "041c4ba30bb90921513be62ed9ffcacd",
+   "agent": "research-agent",
+   "severity": "medium",
+   "title": "Idle run: 2614 tokens, no tool calls",
+   "evidence": "1 LLM call(s), 2597 input tokens, 0 tool calls, only 17 output tokens. A cheap non-LLM pre-check (e.g. 'anything changed since last run?') could skip this run entirely",
+   "span_ids": [
+    "d8bb1c4ef3e62704"
+   ],
+   "wasted_tokens": 2614,
+   "est_savings": 0.007995
+  },
+  {
+   "detector": "idle_run",
+   "trace_id": "b7b100723436873728ffa4907d525a4e",
+   "agent": "ops-heartbeat",
+   "severity": "medium",
+   "title": "Idle run: 2737 tokens, no tool calls",
+   "evidence": "2 LLM call(s), 2722 input tokens, 0 tool calls, output says 'nothing happened'. A cheap non-LLM pre-check (e.g. 'anything changed since last run?') could skip this run entirely",
+   "span_ids": [
+    "8852c78e0633a286",
+    "c455da792a4150de"
+   ],
+   "wasted_tokens": 2737,
+   "est_savings": 0.0077138
+  },
+  {
+   "detector": "prompt_bloat",
+   "trace_id": "bc6965e7bdfb0e2fcf7a9bd510e68719",
+   "agent": "support-agent",
+   "severity": "medium",
+   "title": "Prompt grew 3.1x over 6 LLM calls",
+   "evidence": "input tokens 2362 -> 7227 (3.1x, threshold 2.5x), grew on 5/5 steps. Savings assume compaction removes 50% of the growth",
+   "span_ids": [
+    "aabd4589b7365e1b",
+    "20d1eef15861919d",
+    "7f1e6dcc955d8f95",
+    "f808e17a3a96c7f5",
+    "4684ac7324522ef6",
+    "539e9c1f8cb8cf5d"
+   ],
+   "wasted_tokens": 6739,
+   "est_savings": 0.033695
+  },
+  {
+   "detector": "retry_storm",
+   "trace_id": "2c981221d4b6f0f23bb979b93f8cc66b",
+   "agent": "ops-heartbeat",
+   "severity": "high",
+   "title": "5 consecutive failures on tool:notify_oncall",
+   "evidence": "5 failed attempts in a row on tool:notify_oncall (threshold 3); median gap between attempts 1473 ms; errors: ConnectionError",
+   "span_ids": [
+    "83f079b3f78ffd83",
+    "4a02d7c19859df42",
+    "1d2b11d0e976d79f",
+    "ce986e40723182d4",
+    "d2925f7cb624013a"
+   ],
+   "wasted_tokens": 10019,
+   "est_savings": 0.031272
+  },
+  {
+   "detector": "idle_run",
+   "trace_id": "ee4ebb16d980a784185708fa426e08b6",
+   "agent": "research-agent",
+   "severity": "medium",
+   "title": "Idle run: 2091 tokens, no tool calls",
+   "evidence": "1 LLM call(s), 2024 input tokens, 0 tool calls, output says 'nothing happened'. A cheap non-LLM pre-check (e.g. 'anything changed since last run?') could skip this run entirely",
+   "span_ids": [
+    "f926393cf1974022"
+   ],
+   "wasted_tokens": 2091,
+   "est_savings": 0.006876
+  },
+  {
+   "detector": "prompt_bloat",
+   "trace_id": "071a8d5363e07207113cb0099cff77c5",
+   "agent": "support-agent",
+   "severity": "high",
+   "title": "Prompt grew 9.9x over 8 LLM calls",
+   "evidence": "input tokens 2371 -> 23381 (9.9x, threshold 2.5x), grew on 7/7 steps. Savings assume compaction removes 50% of the growth",
+   "span_ids": [
+    "19940293fbc6423e",
+    "80dc3ba1da0eb3c3",
+    "888d7c51404eb634",
+    "636404e8a3b0e3da",
+    "c2afaa5f01910880",
+    "03d7f55b896f07e5",
+    "842a4b9596bc3f42",
+    "b601efce7b2ff249"
+   ],
+   "wasted_tokens": 43192,
+   "est_savings": 0.21595999999999999
+  },
+  {
+   "detector": "idle_run",
+   "trace_id": "42fbacf15c05dceef49c66f4ab86d1c5",
+   "agent": "ops-heartbeat",
+   "severity": "medium",
+   "title": "Idle run: 3219 tokens, no tool calls",
+   "evidence": "1 LLM call(s), 3211 input tokens, 0 tool calls, only 8 output tokens. A cheap non-LLM pre-check (e.g. 'anything changed since last run?') could skip this run entirely",
+   "span_ids": [
+    "881fea11d36b06cd"
+   ],
+   "wasted_tokens": 3219,
+   "est_savings": 0.009729
+  },
+  {
+   "detector": "prompt_bloat",
+   "trace_id": "4ba408a8d15d4c4315678e9b8c38c18b",
+   "agent": "support-agent",
+   "severity": "high",
+   "title": "Prompt grew 12.4x over 7 LLM calls",
+   "evidence": "input tokens 1845 -> 22889 (12.4x, threshold 2.5x), grew on 6/6 steps. Savings assume compaction removes 50% of the growth",
+   "span_ids": [
+    "0fcc588e49ec6e32",
+    "e5d25bc33c3826aa",
+    "51bf4361edb5db91",
+    "f1830345a4229f14",
+    "c14f5b9f82a54c56",
+    "46bfc38b7b8ae091",
+    "8ce285dbdb30e078"
+   ],
+   "wasted_tokens": 38336,
+   "est_savings": 0.19168
+  },
+  {
+   "detector": "oversized_model",
+   "trace_id": "b89b4995e32e3ac453fe40e39c6c3c4e",
+   "agent": "sql-analyst",
+   "severity": "low",
+   "title": "4 trivial steps on large model orion-large",
+   "evidence": "4 calls with <= 600 input and <= 50 output tokens ran on a large-tier model; routing them to orion-mini would cost less",
+   "span_ids": [
+    "0ef40214014b6836",
+    "2931e8032ec9e5f6",
+    "128e92ad6b707ef6",
+    "ee653bb6ec981b8e"
+   ],
+   "wasted_tokens": 0,
+   "est_savings": 0.0058431
+  },
+  {
+   "detector": "retry_storm",
+   "trace_id": "2eca29b79087ba7334bbc27828d217d6",
+   "agent": "research-agent",
+   "severity": "medium",
+   "title": "3 consecutive failures on llm:vega-pro",
+   "evidence": "3 failed attempts in a row on llm:vega-pro (threshold 3); median gap between attempts 81 ms; errors: Timeout; looks like no backoff",
+   "span_ids": [
+    "4f39a47fb3288760",
+    "070deea0bb09e763",
+    "fd780916aa846060"
+   ],
+   "wasted_tokens": 6050,
+   "est_savings": 0.01815
+  },
+  {
+   "detector": "tool_loop",
+   "trace_id": "10d5d5b8d448a70dc04147f5aa9af6c4",
+   "agent": "support-agent",
+   "severity": "medium",
+   "title": "create_ticket called 3x with identical arguments",
+   "evidence": "tool=create_ticket args={\"query\": \"create_ticket-11355548\"} repeated 3 times (threshold 3); 2 calls and 2 deciding LLM calls are redundant",
+   "span_ids": [
+    "f84716b7375af79e",
+    "031fdae1b8ab8e09",
+    "9437ea94e5b2fd55"
+   ],
+   "wasted_tokens": 4928,
+   "est_savings": 0.02552
+  },
+  {
+   "detector": "retry_storm",
+   "trace_id": "d91ade99c23e471a60818fb2755eb364",
+   "agent": "support-agent",
+   "severity": "high",
+   "title": "5 consecutive failures on llm:orion-large",
+   "evidence": "5 failed attempts in a row on llm:orion-large (threshold 3); median gap between attempts 84 ms; errors: RateLimitError; looks like no backoff",
+   "span_ids": [
+    "5912853ea204a093",
+    "02d4729dd414cafe",
+    "7e4456d712a82af1",
+    "fc41172136677c4a",
+    "50278ec26125cb48"
+   ],
+   "wasted_tokens": 0,
+   "est_savings": 0.0
+  },
+  {
+   "detector": "tool_loop",
+   "trace_id": "1740e77b1d52210671e61fd1e846d688",
+   "agent": "support-agent",
+   "severity": "medium",
+   "title": "search_kb called 5x with identical arguments",
+   "evidence": "tool=search_kb args={\"query\": \"search_kb-262299342\"} repeated 5 times (threshold 3); 4 calls and 4 deciding LLM calls are redundant",
+   "span_ids": [
+    "0191073f8cfcb112",
+    "b34efd5b6e737276",
+    "a5a414b21956673f",
+    "a9065b41b9be1d00",
+    "e82ae2455a422292"
+   ],
+   "wasted_tokens": 9545,
+   "est_savings": 0.049635
+  },
+  {
+   "detector": "oversized_model",
+   "trace_id": "4919d9ff57dfba1d2d555314143e7fb7",
+   "agent": "support-agent",
+   "severity": "low",
+   "title": "2 trivial steps on large model orion-large",
+   "evidence": "2 calls with <= 600 input and <= 50 output tokens ran on a large-tier model; routing them to orion-mini would cost less",
+   "span_ids": [
+    "e883a4f4b29f2d6b",
+    "efd52c09d6b9bf52"
+   ],
+   "wasted_tokens": 0,
+   "est_savings": 0.0037252000000000006
+  },
+  {
+   "detector": "idle_run",
+   "trace_id": "32069ba39561a5748b61d80da691fdda",
+   "agent": "research-agent",
+   "severity": "medium",
+   "title": "Idle run: 2511 tokens, no tool calls",
+   "evidence": "2 LLM call(s), 2475 input tokens, 0 tool calls, output says 'nothing to report'. A cheap non-LLM pre-check (e.g. 'anything changed since last run?') could skip this run entirely",
+   "span_ids": [
+    "6a5b54e4f0e2aa55",
+    "1dc8b74ad10b41c1"
+   ],
+   "wasted_tokens": 2511,
+   "est_savings": 0.0070566
+  },
+  {
+   "detector": "prompt_bloat",
+   "trace_id": "efa107eeed755494064b4edc101905bf",
+   "agent": "research-agent",
+   "severity": "high",
+   "title": "Prompt grew 5.5x over 5 LLM calls",
+   "evidence": "input tokens 2950 -> 16262 (5.5x, threshold 2.5x), grew on 4/4 steps. Savings assume compaction removes 50% of the growth",
+   "span_ids": [
+    "0bae6d2bfbece5d5",
+    "2d9d4bd8aeb2f98c",
+    "4f26fedb10d28a32",
+    "a99e0f9b768eaf58",
+    "1eb2c17031e2d719"
+   ],
+   "wasted_tokens": 16718,
+   "est_savings": 0.050154
+  },
+  {
+   "detector": "tool_loop",
+   "trace_id": "f3151b0afd135ac5e6cfaf54ca9dc28c",
+   "agent": "support-agent",
+   "severity": "high",
+   "title": "create_ticket called 6x with identical arguments",
+   "evidence": "tool=create_ticket args={\"query\": \"create_ticket-357897967\"} repeated 6 times (threshold 3); 5 calls and 5 deciding LLM calls are redundant",
+   "span_ids": [
+    "47d41385dc404104",
+    "f592478d9523175b",
+    "ce01fa3fe2d8d2e6",
+    "a9a45be4a589c017",
+    "e3a71aee702adf3b",
+    "437478bd773fbb30"
+   ],
+   "wasted_tokens": 11893,
+   "est_savings": 0.061785
+  },
+  {
+   "detector": "oversized_model",
+   "trace_id": "1a01d224f55c6af8c6b44036baca2a87",
+   "agent": "research-agent",
+   "severity": "low",
+   "title": "4 trivial steps on large model vega-pro",
+   "evidence": "4 calls with <= 600 input and <= 50 output tokens ran on a large-tier model; routing them to vega-flash would cost less",
+   "span_ids": [
+    "a2d4faa0a466c489",
+    "69f6a8cb42acdbbb",
+    "ef8b07d099c8cca7",
+    "3a363b3a8aa7deb9"
+   ],
+   "wasted_tokens": 0,
+   "est_savings": 0.0045791
+  },
+  {
+   "detector": "oversized_model",
+   "trace_id": "63478b41f20239817e02c8c1e7c2caa7",
+   "agent": "sql-analyst",
+   "severity": "low",
+   "title": "2 trivial steps on large model orion-large",
+   "evidence": "2 calls with <= 600 input and <= 50 output tokens ran on a large-tier model; routing them to orion-mini would cost less",
+   "span_ids": [
+    "8ebc02b138665e81",
+    "db6e82cc5c57eb93"
+   ],
+   "wasted_tokens": 0,
+   "est_savings": 0.0038048000000000005
+  },
+  {
+   "detector": "idle_run",
+   "trace_id": "d3a085ec2c1fd0db689a5f90a5500af1",
+   "agent": "ops-heartbeat",
+   "severity": "medium",
+   "title": "Idle run: 5818 tokens, no tool calls",
+   "evidence": "2 LLM call(s), 5783 input tokens, 0 tool calls, output says 'nothing happened'. A cheap non-LLM pre-check (e.g. 'anything changed since last run?') could skip this run entirely",
+   "span_ids": [
+    "c391ef93aa012ab9",
+    "2e0cf801f4366b12"
+   ],
+   "wasted_tokens": 5818,
+   "est_savings": 0.017154199999999998
+  },
+  {
+   "detector": "retry_storm",
+   "trace_id": "b02d25b4bcccd4b3055c1cac68ea0d22",
+   "agent": "ops-heartbeat",
+   "severity": "medium",
+   "title": "4 consecutive failures on tool:check_status",
+   "evidence": "4 failed attempts in a row on tool:check_status (threshold 3); median gap between attempts 1240 ms; errors: TimeoutError",
+   "span_ids": [
+    "562f62e88a0bb8e4",
+    "3044f29765623354",
+    "525f38eb00fc3ce3",
+    "cf42ce0a539e832e"
+   ],
+   "wasted_tokens": 8827,
+   "est_savings": 0.027192
+  },
+  {
+   "detector": "retry_storm",
+   "trace_id": "48c31385922ba6f1d9c175fd9e28984f",
+   "agent": "sql-analyst",
+   "severity": "high",
+   "title": "6 consecutive failures on llm:orion-large",
+   "evidence": "6 failed attempts in a row on llm:orion-large (threshold 3); median gap between attempts 205 ms; errors: RateLimitError; looks like no backoff",
+   "span_ids": [
+    "cd4ebc4b9bb718a5",
+    "d8d3ac89810a9f84",
+    "1ccfb86d4d617ffb",
+    "764878d769343f60",
+    "49fa485d3e16918f",
+    "75557a6cd6c1de57"
+   ],
+   "wasted_tokens": 0,
+   "est_savings": 0.0
+  },
+  {
+   "detector": "retry_storm",
+   "trace_id": "d351df5f310b82d790b9ae31c46ac405",
+   "agent": "support-agent",
+   "severity": "medium",
+   "title": "3 consecutive failures on tool:send_reply",
+   "evidence": "3 failed attempts in a row on tool:send_reply (threshold 3); median gap between attempts 987 ms; errors: ConnectionError",
+   "span_ids": [
+    "6e971b5a4b50045e",
+    "80ade83c0d41de26",
+    "b894550ae9faa206"
+   ],
+   "wasted_tokens": 4946,
+   "est_savings": 0.02511
+  },
+  {
+   "detector": "tool_loop",
+   "trace_id": "f24e24772f515686a88db0f320b2a35f",
+   "agent": "ops-heartbeat",
+   "severity": "high",
+   "title": "notify_oncall called 6x with identical arguments",
+   "evidence": "tool=notify_oncall args={\"query\": \"notify_oncall-878857903\"} repeated 6 times (threshold 3); 5 calls and 5 deciding LLM calls are redundant",
+   "span_ids": [
+    "ec529f2b3ca0cbd6",
+    "a2206dd124a7dce4",
+    "28349f057ea19c4a",
+    "893bfecf454c976e",
+    "3f12cf6cbb4400f1",
+    "522c12e18e416029"
+   ],
+   "wasted_tokens": 13273,
+   "est_savings": 0.04251
+  },
+  {
+   "detector": "idle_run",
+   "trace_id": "d52939e53be45056e7ea6db48802bbd2",
+   "agent": "ops-heartbeat",
+   "severity": "medium",
+   "title": "Idle run: 4598 tokens, no tool calls",
+   "evidence": "1 LLM call(s), 4587 input tokens, 0 tool calls, output says 'no action'. A cheap non-LLM pre-check (e.g. 'anything changed since last run?') could skip this run entirely",
+   "span_ids": [
+    "29e9efa257232faa"
+   ],
+   "wasted_tokens": 4598,
+   "est_savings": 0.013893
+  },
+  {
+   "detector": "oversized_model",
+   "trace_id": "7f0643ea87eb0127c979ff8fcb8a051a",
+   "agent": "support-agent",
+   "severity": "low",
+   "title": "3 trivial steps on large model orion-large",
+   "evidence": "3 calls with <= 600 input and <= 50 output tokens ran on a large-tier model; routing them to orion-mini would cost less",
+   "span_ids": [
+    "23cdec8466ed34e2",
+    "709b5f65ea3e442f",
+    "01d23fc9b44df4b5"
+   ],
+   "wasted_tokens": 0,
+   "est_savings": 0.0055809
+  },
+  {
+   "detector": "tool_loop",
+   "trace_id": "3be9cfb0bb77e34a38f222b983106b55",
+   "agent": "sql-analyst",
+   "severity": "medium",
+   "title": "run_sql called 4x with identical arguments",
+   "evidence": "tool=run_sql args={\"query\": \"run_sql-635631189\"} repeated 4 times (threshold 3); 3 calls and 3 deciding LLM calls are redundant",
+   "span_ids": [
+    "40460d07d4539094",
+    "022862c4b7ab7799",
+    "e9c3d3719f688611",
+    "595f0d20f3966a62"
+   ],
+   "wasted_tokens": 10681,
+   "est_savings": 0.055395
+  },
+  {
+   "detector": "retry_storm",
+   "trace_id": "06a7bafd0327aec2f737e8bc90266418",
+   "agent": "support-agent",
+   "severity": "high",
+   "title": "7 consecutive failures on tool:get_order",
+   "evidence": "7 failed attempts in a row on tool:get_order (threshold 3); median gap between attempts 1190 ms; errors: TimeoutError",
+   "span_ids": [
+    "2bf23fc073939a80",
+    "34460c611bf1b7e1",
+    "90fdbb3e6173e67d",
+    "78fd3b1682628a03",
+    "63cd0cb1a7b3b6f9",
+    "1eb510092f85f6a6",
+    "40fea948d2d93f36"
+   ],
+   "wasted_tokens": 12331,
+   "est_savings": 0.063345
+  },
+  {
+   "detector": "tool_loop",
+   "trace_id": "a43ccdd56bb0c8a02ec0f10aaca5abd4",
+   "agent": "ops-heartbeat",
+   "severity": "medium",
+   "title": "check_status called 3x with identical arguments",
+   "evidence": "tool=check_status args={\"service\": \"payments-api\"} repeated 3 times (threshold 3); 2 calls and 1 deciding LLM calls are redundant",
+   "span_ids": [
+    "68b29ad37867340f",
+    "a6cbb2871432f972",
+    "9a49192f7732c94b"
+   ],
+   "wasted_tokens": 1974,
+   "est_savings": 0.008028
+  },
+  {
+   "detector": "tool_loop",
+   "trace_id": "c36f62b6ab3c5a669a3b2264626b6e7a",
+   "agent": "support-agent",
+   "severity": "high",
+   "title": "get_order called 8x with identical arguments",
+   "evidence": "tool=get_order args={\"query\": \"get_order-3718489\"} repeated 8 times (threshold 3); 7 calls and 7 deciding LLM calls are redundant",
+   "span_ids": [
+    "1e4f1499b0a9f87f",
+    "fb87ebc5d9863b5f",
+    "b26d60785d5b7adb",
+    "f17d8b73e0a1ff32",
+    "0e0f27045265072a",
+    "68151f14d6b6fb16",
+    "252b473ad2cdb683",
+    "7af7bd840121221d"
+   ],
+   "wasted_tokens": 31035,
+   "est_savings": 0.159345
+  },
+  {
+   "detector": "prompt_bloat",
+   "trace_id": "c36f62b6ab3c5a669a3b2264626b6e7a",
+   "agent": "support-agent",
+   "severity": "medium",
+   "title": "Prompt grew 2.8x over 12 LLM calls",
+   "evidence": "input tokens 1892 -> 5324 (2.8x, threshold 2.5x), grew on 11/11 steps. Savings assume compaction removes 50% of the growth",
+   "span_ids": [
+    "65fe3fdd4273f09d",
+    "639126040519ae36",
+    "aec16f6caea74c2e",
+    "9ea786bc6fdab002",
+    "93fc03bc3ef3d085",
+    "ee77f590ea1581f6",
+    "f089d324bfa223da",
+    "16e5b746245c92cb",
+    "1d8d7b02bc5d618f",
+    "4c564c15e507b981",
+    "129c717f636dde12",
+    "02782c34ed809b95"
+   ],
+   "wasted_tokens": 11738,
+   "est_savings": 0.05868999999999999
+  },
+  {
+   "detector": "idle_run",
+   "trace_id": "ae8b3239311d3751507409da0242fb7e",
+   "agent": "ops-heartbeat",
+   "severity": "medium",
+   "title": "Idle run: 5490 tokens, no tool calls",
+   "evidence": "1 LLM call(s), 5481 input tokens, 0 tool calls, only 9 output tokens. A cheap non-LLM pre-check (e.g. 'anything changed since last run?') could skip this run entirely",
+   "span_ids": [
+    "734264e16957a9dd"
+   ],
+   "wasted_tokens": 5490,
+   "est_savings": 0.016551
+  },
+  {
+   "detector": "prompt_bloat",
+   "trace_id": "cbfd0aa6fc696d179f442e7b57869db0",
+   "agent": "support-agent",
+   "severity": "medium",
+   "title": "Prompt grew 2.9x over 6 LLM calls",
+   "evidence": "input tokens 2166 -> 6375 (2.9x, threshold 2.5x), grew on 5/5 steps. Savings assume compaction removes 50% of the growth",
+   "span_ids": [
+    "13759f4a72433e53",
+    "7b4b4a2919916116",
+    "6699aac3b8f8d92a",
+    "46296adaf367043b",
+    "aaf39dd526b16c7c",
+    "407ad92f660d63f3"
+   ],
+   "wasted_tokens": 6628,
+   "est_savings": 0.03314
+  },
+  {
+   "detector": "idle_run",
+   "trace_id": "b0ead4df5a94ca8a10134e941b1beaa3",
+   "agent": "research-agent",
+   "severity": "medium",
+   "title": "Idle run: 4338 tokens, no tool calls",
+   "evidence": "2 LLM call(s), 4311 input tokens, 0 tool calls, output says 'nothing happened'. A cheap non-LLM pre-check (e.g. 'anything changed since last run?') could skip this run entirely",
+   "span_ids": [
+    "028af9a75ac8c08c",
+    "18161864515b045a"
+   ],
+   "wasted_tokens": 4338,
+   "est_savings": 0.012329000000000001
+  },
+  {
+   "detector": "tool_loop",
+   "trace_id": "d10499485f6da88484fbcda0164e03e0",
+   "agent": "ops-heartbeat",
+   "severity": "high",
+   "title": "notify_oncall called 7x with identical arguments",
+   "evidence": "tool=notify_oncall args={\"query\": \"notify_oncall-363894919\"} repeated 7 times (threshold 3); 6 calls and 6 deciding LLM calls are redundant",
+   "span_ids": [
+    "73eb73ce262edf5e",
+    "2abc64d6b21e810b",
+    "02d6fd311c28bbd8",
+    "55a333874edd6053",
+    "a65a158b7455008b",
+    "629335dc8fe5bfbe",
+    "3c76cf5bf9ee5687"
+   ],
+   "wasted_tokens": 18194,
+   "est_savings": 0.057849
+  },
+  {
+   "detector": "idle_run",
+   "trace_id": "eeda22598c494fb21ec83afbe79e9573",
+   "agent": "ops-heartbeat",
+   "severity": "medium",
+   "title": "Idle run: 5410 tokens, no tool calls",
+   "evidence": "2 LLM call(s), 5372 input tokens, 0 tool calls, output says 'nothing happened'. A cheap non-LLM pre-check (e.g. 'anything changed since last run?') could skip this run entirely",
+   "span_ids": [
+    "6bae63402ef3f589",
+    "e34a4e23690a3f42"
+   ],
+   "wasted_tokens": 5410,
+   "est_savings": 0.0157542
+  },
+  {
+   "detector": "prompt_bloat",
+   "trace_id": "332066bf006083dd541d013617d8ea64",
+   "agent": "support-agent",
+   "severity": "high",
+   "title": "Prompt grew 8.4x over 8 LLM calls",
+   "evidence": "input tokens 2548 -> 21499 (8.4x, threshold 2.5x), grew on 7/7 steps. Savings assume compaction removes 50% of the growth",
+   "span_ids": [
+    "995d1d59efd9b5e1",
+    "0ae354944c60429b",
+    "8a178298a10cf398",
+    "e5f3fcb9a3ffcbbd",
+    "28ca1d6f744a7cf5",
+    "2a650cdf87585e33",
+    "8cde59986a247a0c",
+    "c5388e2adec01aa2"
+   ],
+   "wasted_tokens": 35935,
+   "est_savings": 0.179675
+  },
+  {
+   "detector": "oversized_model",
+   "trace_id": "332066bf006083dd541d013617d8ea64",
+   "agent": "support-agent",
+   "severity": "low",
+   "title": "2 trivial steps on large model orion-large",
+   "evidence": "2 calls with <= 600 input and <= 50 output tokens ran on a large-tier model; routing them to orion-mini would cost less",
+   "span_ids": [
+    "0ded1b4d79d81ee9",
+    "a17cd064698a4888"
+   ],
+   "wasted_tokens": 0,
+   "est_savings": 0.004162
+  },
+  {
+   "detector": "tool_loop",
+   "trace_id": "a9ca27f7c30501d2935a7058c1f01055",
+   "agent": "research-agent",
+   "severity": "medium",
+   "title": "web_search called 3x with identical arguments",
+   "evidence": "tool=web_search args={\"query\": \"web_search-481648265\"} repeated 3 times (threshold 3); 2 calls and 2 deciding LLM calls are redundant",
+   "span_ids": [
+    "8400bf6e32c2368c",
+    "75a9c71f35c0690e",
+    "bb54c7f44c5b6bf4"
+   ],
+   "wasted_tokens": 9357,
+   "est_savings": 0.028916999999999998
+  },
+  {
+   "detector": "prompt_bloat",
+   "trace_id": "af3ae9ef663b28bc8dffb34c8b42cee7",
+   "agent": "support-agent",
+   "severity": "high",
+   "title": "Prompt grew 8.3x over 7 LLM calls",
+   "evidence": "input tokens 2283 -> 18979 (8.3x, threshold 2.5x), grew on 6/6 steps. Savings assume compaction removes 50% of the growth",
+   "span_ids": [
+    "0562fe16be65f35d",
+    "8a5d37fc88bfe705",
+    "525aaa7d64493687",
+    "5683a36ab2a3f8e5",
+    "61d3b32de6bb4d53",
+    "34e6ca9d99ae1f6e",
+    "3c9a5634b8ed8fe4"
+   ],
+   "wasted_tokens": 31495,
+   "est_savings": 0.15747499999999998
+  },
+  {
+   "detector": "oversized_model",
+   "trace_id": "b5abf66e0e7e481143eddd879131e5c3",
+   "agent": "ops-heartbeat",
+   "severity": "low",
+   "title": "3 trivial steps on large model vega-pro",
+   "evidence": "3 calls with <= 600 input and <= 50 output tokens ran on a large-tier model; routing them to vega-flash would cost less",
+   "span_ids": [
+    "bece704dbb5f4cf5",
+    "36bb36d15d88aece",
+    "f060470cb1c3f9d5"
+   ],
+   "wasted_tokens": 0,
+   "est_savings": 0.0036221000000000005
+  },
+  {
+   "detector": "idle_run",
+   "trace_id": "8dc12eba1f808e1ce29acf4c636a76b6",
+   "agent": "ops-heartbeat",
+   "severity": "medium",
+   "title": "Idle run: 5145 tokens, no tool calls",
+   "evidence": "1 LLM call(s), 5114 input tokens, 0 tool calls, only 31 output tokens. A cheap non-LLM pre-check (e.g. 'anything changed since last run?') could skip this run entirely",
+   "span_ids": [
+    "9b7641e8b6a6d38f"
+   ],
+   "wasted_tokens": 5145,
+   "est_savings": 0.015714
+  },
+  {
+   "detector": "prompt_bloat",
+   "trace_id": "cbf9c222c6694eaf913f187144f36f67",
+   "agent": "support-agent",
+   "severity": "high",
+   "title": "Prompt grew 11.7x over 8 LLM calls",
+   "evidence": "input tokens 2045 -> 23867 (11.7x, threshold 2.5x), grew on 7/7 steps. Savings assume compaction removes 50% of the growth",
+   "span_ids": [
+    "00f2f636f897baf0",
+    "eb1797eddbab2279",
+    "651cd985338a673a",
+    "d6e39e870cfa5dd9",
+    "e14b698592ed1507",
+    "625a58c6156ba919",
+    "52994a476b2f92d6",
+    "bb822a1351936ec1"
+   ],
+   "wasted_tokens": 41366,
+   "est_savings": 0.20682999999999999
+  },
+  {
+   "detector": "tool_loop",
+   "trace_id": "b99530cf75cd9559222e34e73c4e1724",
+   "agent": "research-agent",
+   "severity": "medium",
+   "title": "web_search called 5x with identical arguments",
+   "evidence": "tool=web_search args={\"query\": \"web_search-775855315\"} repeated 5 times (threshold 3); 4 calls and 4 deciding LLM calls are redundant",
+   "span_ids": [
+    "78b5f3403a5e2449",
+    "0e7e41b692bdd0ed",
+    "cbec682ad0035e3f",
+    "50fcdd456dac7e27",
+    "cca8f708df77c1cc"
+   ],
+   "wasted_tokens": 21592,
+   "est_savings": 0.06689099999999999
+  },
+  {
+   "detector": "idle_run",
+   "trace_id": "a6d5ab1c8c4437c9a46ebe6968136889",
+   "agent": "research-agent",
+   "severity": "medium",
+   "title": "Idle run: 4800 tokens, no tool calls",
+   "evidence": "2 LLM call(s), 4774 input tokens, 0 tool calls, output says 'nothing happened'. A cheap non-LLM pre-check (e.g. 'anything changed since last run?') could skip this run entirely",
+   "span_ids": [
+    "6d8533a2dd1d125f",
+    "94040039d26c8105"
+   ],
+   "wasted_tokens": 4800,
+   "est_savings": 0.0138394
+  },
+  {
+   "detector": "idle_run",
+   "trace_id": "807f690e42004aca3358b2ecc50b9ab2",
+   "agent": "ops-heartbeat",
+   "severity": "medium",
+   "title": "Idle run: 4271 tokens, no tool calls",
+   "evidence": "1 LLM call(s), 4191 input tokens, 0 tool calls, output says 'nothing happened'. A cheap non-LLM pre-check (e.g. 'anything changed since last run?') could skip this run entirely",
+   "span_ids": [
+    "8db34e0e4d67b051"
+   ],
+   "wasted_tokens": 4271,
+   "est_savings": 0.013533
+  },
+  {
+   "detector": "oversized_model",
+   "trace_id": "0c42333be081aabd48b18785592d899e",
+   "agent": "support-agent",
+   "severity": "low",
+   "title": "2 trivial steps on large model orion-large",
+   "evidence": "2 calls with <= 600 input and <= 50 output tokens ran on a large-tier model; routing them to orion-mini would cost less",
+   "span_ids": [
+    "eb8a720715183e2c",
+    "37c1699555e456f0"
+   ],
+   "wasted_tokens": 0,
+   "est_savings": 0.0044916
+  },
+  {
+   "detector": "prompt_bloat",
+   "trace_id": "27af99958e5a5e092ccc181e2e54ca50",
+   "agent": "sql-analyst",
+   "severity": "high",
+   "title": "Prompt grew 8.1x over 7 LLM calls",
+   "evidence": "input tokens 2379 -> 19232 (8.1x, threshold 2.5x), grew on 6/6 steps. Savings assume compaction removes 50% of the growth",
+   "span_ids": [
+    "ddc7af5953a55fb6",
+    "5ba05fa5314e8bc7",
+    "9872643b974f65f5",
+    "45de0e0b005476f5",
+    "c055ceb0b9ee2247",
+    "9af7884873ce9813",
+    "5f7e9ce03a698c2f"
+   ],
+   "wasted_tokens": 30901,
+   "est_savings": 0.154505
+  },
+  {
+   "detector": "idle_run",
+   "trace_id": "ac76dac006624d8af7d348efb5dab58c",
+   "agent": "research-agent",
+   "severity": "medium",
+   "title": "Idle run: 5905 tokens, no tool calls",
+   "evidence": "1 LLM call(s), 5877 input tokens, 0 tool calls, output says 'nothing to report'. A cheap non-LLM pre-check (e.g. 'anything changed since last run?') could skip this run entirely",
+   "span_ids": [
+    "95ce8a808eed7ac9"
+   ],
+   "wasted_tokens": 5905,
+   "est_savings": 0.017967
+  },
+  {
+   "detector": "tool_loop",
+   "trace_id": "8f654132a9f42e236b12bd633900f29b",
+   "agent": "ops-heartbeat",
+   "severity": "medium",
+   "title": "check_status called 3x with identical arguments",
+   "evidence": "tool=check_status args={\"service\": \"payments-api\"} repeated 3 times (threshold 3); 2 calls and 1 deciding LLM calls are redundant",
+   "span_ids": [
+    "384ec60d5b932aef",
+    "053f349fa2908eda",
+    "47c534e3831448cb"
+   ],
+   "wasted_tokens": 2638,
+   "est_savings": 0.009066
+  },
+  {
+   "detector": "retry_storm",
+   "trace_id": "71a5e9e33ebc7049d67e701049b66d1c",
+   "agent": "sql-analyst",
+   "severity": "high",
+   "title": "5 consecutive failures on tool:describe_table",
+   "evidence": "5 failed attempts in a row on tool:describe_table (threshold 3); median gap between attempts 995 ms; errors: TimeoutError",
+   "span_ids": [
+    "b3054c899d41601d",
+    "148d31adeb84e764",
+    "7fbb667df95a5a97",
+    "b624c2836bb45123",
+    "5837c2f90ef42cd8"
+   ],
+   "wasted_tokens": 10647,
+   "est_savings": 0.054385
+  },
+  {
+   "detector": "tool_loop",
+   "trace_id": "1ef15fc11daf231bc1737ba6f33b7c4e",
+   "agent": "sql-analyst",
+   "severity": "medium",
+   "title": "run_sql called 3x with identical arguments",
+   "evidence": "tool=run_sql args={\"query\": \"run_sql-685016513\"} repeated 3 times (threshold 3); 2 calls and 2 deciding LLM calls are redundant",
+   "span_ids": [
+    "a7087c377b1137b3",
+    "32cb9f7463d2d733",
+    "0fbd0e7f9a40013b"
+   ],
+   "wasted_tokens": 6451,
+   "est_savings": 0.033075
+  },
+  {
+   "detector": "tool_loop",
+   "trace_id": "15eb89a865a72b5fa4c1bf9172926459",
+   "agent": "support-agent",
+   "severity": "high",
+   "title": "create_ticket called 6x with identical arguments",
+   "evidence": "tool=create_ticket args={\"query\": \"create_ticket-422955610\"} repeated 6 times (threshold 3); 5 calls and 5 deciding LLM calls are redundant",
+   "span_ids": [
+    "b6d0f0efe4598034",
+    "002c49539bf447c3",
+    "956f769b94ae0244",
+    "90cb33095167dd70",
+    "52ce32e822b54f37",
+    "7af31f447a03d8a0"
+   ],
+   "wasted_tokens": 17843,
+   "est_savings": 0.091795
+  },
+  {
+   "detector": "oversized_model",
+   "trace_id": "15eb89a865a72b5fa4c1bf9172926459",
+   "agent": "support-agent",
+   "severity": "low",
+   "title": "2 trivial steps on large model orion-large",
+   "evidence": "2 calls with <= 600 input and <= 50 output tokens ran on a large-tier model; routing them to orion-mini would cost less",
+   "span_ids": [
+    "2b441d12532a547f",
+    "26fcbc1d77009e43"
+   ],
+   "wasted_tokens": 0,
+   "est_savings": 0.004354
+  },
+  {
+   "detector": "idle_run",
+   "trace_id": "70ffab22886a9dcb88cd565c17c29048",
+   "agent": "research-agent",
+   "severity": "medium",
+   "title": "Idle run: 4967 tokens, no tool calls",
+   "evidence": "2 LLM call(s), 4949 input tokens, 0 tool calls, output says 'nothing happened'. A cheap non-LLM pre-check (e.g. 'anything changed since last run?') could skip this run entirely",
+   "span_ids": [
+    "fa1c6272d76d6de7",
+    "868c8cdd4ef153c8"
+   ],
+   "wasted_tokens": 4967,
+   "est_savings": 0.01428
+  },
+  {
+   "detector": "tool_loop",
+   "trace_id": "502d3593848076ab4cba06edd47262cf",
+   "agent": "research-agent",
+   "severity": "medium",
+   "title": "web_search called 4x with identical arguments",
+   "evidence": "tool=web_search args={\"query\": \"web_search-881370047\"} repeated 4 times (threshold 3); 3 calls and 3 deciding LLM calls are redundant",
+   "span_ids": [
+    "4a6d21579be400f8",
+    "e2422489c5ec796d",
+    "cddedd24c57dfa49",
+    "a829c2ae37ebe27f"
+   ],
+   "wasted_tokens": 31266,
+   "est_savings": 0.094914
+  },
+  {
+   "detector": "prompt_bloat",
+   "trace_id": "502d3593848076ab4cba06edd47262cf",
+   "agent": "research-agent",
+   "severity": "high",
+   "title": "Prompt grew 8.8x over 11 LLM calls",
+   "evidence": "input tokens 3036 -> 26788 (8.8x, threshold 2.5x), grew on 10/10 steps. Savings assume compaction removes 50% of the growth",
+   "span_ids": [
+    "75f1f413cfb82cef",
+    "78936d2d864743c7",
+    "e6adf94882053ed3",
+    "28b8afe23e635507",
+    "6894520aa68385d8",
+    "8f940a739c2e7760",
+    "a61995ded44141d4",
+    "df0b63633e6d48ce",
+    "ff2f63836e3d5887",
+    "ddd44b035653d1b3",
+    "061664a35b24da29"
+   ],
+   "wasted_tokens": 59999,
+   "est_savings": 0.179997
+  },
+  {
+   "detector": "idle_run",
+   "trace_id": "c216a949fc5e260aeaf2b5ee2c164dc4",
+   "agent": "ops-heartbeat",
+   "severity": "medium",
+   "title": "Idle run: 1896 tokens, no tool calls",
+   "evidence": "1 LLM call(s), 1867 input tokens, 0 tool calls, output says 'no action'. A cheap non-LLM pre-check (e.g. 'anything changed since last run?') could skip this run entirely",
+   "span_ids": [
+    "0bb19467913062ca"
+   ],
+   "wasted_tokens": 1896,
+   "est_savings": 0.005949
+  },
+  {
+   "detector": "oversized_model",
+   "trace_id": "2ee4cbbde7f6dec2615b9d20acf70176",
+   "agent": "ops-heartbeat",
+   "severity": "low",
+   "title": "2 trivial steps on large model vega-pro",
+   "evidence": "2 calls with <= 600 input and <= 50 output tokens ran on a large-tier model; routing them to vega-flash would cost less",
+   "span_ids": [
+    "8608da420d15b670",
+    "8dd36a903143ac24"
+   ],
+   "wasted_tokens": 0,
+   "est_savings": 0.0026825
+  },
+  {
+   "detector": "idle_run",
+   "trace_id": "e6e16ab1aa6248e07a04d8fc14118760",
+   "agent": "faq-bot",
+   "severity": "medium",
+   "title": "Idle run: 930 tokens, no tool calls",
+   "evidence": "1 LLM call(s), 890 input tokens, 0 tool calls, only 40 output tokens. A cheap non-LLM pre-check (e.g. 'anything changed since last run?') could skip this run entirely",
+   "span_ids": [
+    "5b83c0a6d42c0ff9"
+   ],
+   "wasted_tokens": 930,
+   "est_savings": 0.000105
+  },
+  {
+   "detector": "oversized_model",
+   "trace_id": "80e01d95bb2ced3f0db71a95be5f24a3",
+   "agent": "research-agent",
+   "severity": "low",
+   "title": "3 trivial steps on large model vega-pro",
+   "evidence": "3 calls with <= 600 input and <= 50 output tokens ran on a large-tier model; routing them to vega-flash would cost less",
+   "span_ids": [
+    "27d6b2e29e597f5d",
+    "19134417281f8439",
+    "7151bed7527fd409"
+   ],
+   "wasted_tokens": 0,
+   "est_savings": 0.0030536999999999995
+  },
+  {
+   "detector": "prompt_bloat",
+   "trace_id": "3c6d8133cbccd4fe5c95e2492b4772f4",
+   "agent": "support-agent",
+   "severity": "medium",
+   "title": "Prompt grew 4.7x over 5 LLM calls",
+   "evidence": "input tokens 2109 -> 9854 (4.7x, threshold 2.5x), grew on 4/4 steps. Savings assume compaction removes 50% of the growth",
+   "span_ids": [
+    "af656bef326dbb01",
+    "c0942bdfe1a8ecda",
+    "1f1e74f585e17c3c",
+    "693c3019a31de4f8",
+    "ad3e9fa290ba2411"
+   ],
+   "wasted_tokens": 10299,
+   "est_savings": 0.051495
+  },
+  {
+   "detector": "prompt_bloat",
+   "trace_id": "f7c85570e431dcdaf0c3ad82feb1d313",
+   "agent": "sql-analyst",
+   "severity": "high",
+   "title": "Prompt grew 6.1x over 6 LLM calls",
+   "evidence": "input tokens 2796 -> 17038 (6.1x, threshold 2.5x), grew on 5/5 steps. Savings assume compaction removes 50% of the growth",
+   "span_ids": [
+    "cd007cada1c06f17",
+    "5039df9ab4e18029",
+    "183f1aa93e45e4a5",
+    "d43f46de333ad1ae",
+    "7603fce398ac352b",
+    "d53294885dd4797b"
+   ],
+   "wasted_tokens": 22217,
+   "est_savings": 0.11108499999999999
+  },
+  {
+   "detector": "idle_run",
+   "trace_id": "f5cd6db1dfa5db119ae48021e780ac62",
+   "agent": "faq-bot",
+   "severity": "medium",
+   "title": "Idle run: 918 tokens, no tool calls",
+   "evidence": "1 LLM call(s), 896 input tokens, 0 tool calls, only 22 output tokens. A cheap non-LLM pre-check (e.g. 'anything changed since last run?') could skip this run entirely",
+   "span_ids": [
+    "529d82f835a3b604"
+   ],
+   "wasted_tokens": 918,
+   "est_savings": 9.84e-05
+  },
+  {
+   "detector": "oversized_model",
+   "trace_id": "915490f6807a2c52990cf751c3f02831",
+   "agent": "support-agent",
+   "severity": "low",
+   "title": "2 trivial steps on large model orion-large",
+   "evidence": "2 calls with <= 600 input and <= 50 output tokens ran on a large-tier model; routing them to orion-mini would cost less",
+   "span_ids": [
+    "1491cdf9fe5dc72a",
+    "f62f7486bfb65261"
+   ],
+   "wasted_tokens": 0,
+   "est_savings": 0.005295299999999999
+  },
+  {
+   "detector": "idle_run",
+   "trace_id": "89b80812c69c270f86f86d78ef87bdbe",
+   "agent": "faq-bot",
+   "severity": "medium",
+   "title": "Idle run: 837 tokens, no tool calls",
+   "evidence": "1 LLM call(s), 797 input tokens, 0 tool calls, only 40 output tokens. A cheap non-LLM pre-check (e.g. 'anything changed since last run?') could skip this run entirely",
+   "span_ids": [
+    "1e720652b19aadda"
+   ],
+   "wasted_tokens": 837,
+   "est_savings": 9.570000000000001e-05
+  },
+  {
+   "detector": "retry_storm",
+   "trace_id": "e1d852f3e70d9181727cc81cc0d4173b",
+   "agent": "support-agent",
+   "severity": "high",
+   "title": "6 consecutive failures on llm:orion-large",
+   "evidence": "6 failed attempts in a row on llm:orion-large (threshold 3); median gap between attempts 161 ms; errors: Timeout; looks like no backoff",
+   "span_ids": [
+    "3512902b0444e642",
+    "1f0a7308544b1a44",
+    "b8957c93c28aa3ec",
+    "41a03734baf362fb",
+    "fea9c616db59ba43",
+    "963cae6e8563e2f8"
+   ],
+   "wasted_tokens": 7235,
+   "est_savings": 0.036175
+  },
+  {
+   "detector": "retry_storm",
+   "trace_id": "42def74753882299588e3ff3edb50d4c",
+   "agent": "ops-heartbeat",
+   "severity": "medium",
+   "title": "4 consecutive failures on tool:notify_oncall",
+   "evidence": "4 failed attempts in a row on tool:notify_oncall (threshold 3); median gap between attempts 941 ms; errors: ConnectionError",
+   "span_ids": [
+    "64986ec1e47aa215",
+    "6ffaa787e3f9d5ff",
+    "ee6fe6ca446f4fd0",
+    "67247e29fd958b6e"
+   ],
+   "wasted_tokens": 7980,
+   "est_savings": 0.024696
+  },
+  {
+   "detector": "oversized_model",
+   "trace_id": "7fd30610377d10dbb67e82c084a8db26",
+   "agent": "ops-heartbeat",
+   "severity": "low",
+   "title": "4 trivial steps on large model vega-pro",
+   "evidence": "4 calls with <= 600 input and <= 50 output tokens ran on a large-tier model; routing them to vega-flash would cost less",
+   "span_ids": [
+    "c43ecc48b6c12525",
+    "30e2fbe90680809e",
+    "13ecde6004f08423",
+    "59123e0375ca3ff8"
+   ],
+   "wasted_tokens": 0,
+   "est_savings": 0.0058348
+  },
+  {
+   "detector": "oversized_model",
+   "trace_id": "449d9f4fb1cb0501f360af761003a4ad",
+   "agent": "support-agent",
+   "severity": "low",
+   "title": "4 trivial steps on large model orion-large",
+   "evidence": "4 calls with <= 600 input and <= 50 output tokens ran on a large-tier model; routing them to orion-mini would cost less",
+   "span_ids": [
+    "b41eb704322e2f0e",
+    "02d1269daae53fff",
+    "b88dfdd8ac6d680a",
+    "d052857e8f8b55d1"
+   ],
+   "wasted_tokens": 0,
+   "est_savings": 0.0090954
+  },
+  {
+   "detector": "tool_loop",
+   "trace_id": "57f86ee9817f466722f44bda1720c826",
+   "agent": "support-agent",
+   "severity": "medium",
+   "title": "send_reply called 4x with identical arguments",
+   "evidence": "tool=send_reply args={\"query\": \"send_reply-611499270\"} repeated 4 times (threshold 3); 3 calls and 3 deciding LLM calls are redundant",
+   "span_ids": [
+    "87f3b67e40f99662",
+    "5619d6798e417853",
+    "c7a5b7557a97a5df",
+    "1b4c5a823ed31eb3"
+   ],
+   "wasted_tokens": 9399,
+   "est_savings": 0.048825
+  },
+  {
+   "detector": "retry_storm",
+   "trace_id": "40e54037eef39b6679c466f8c2165055",
+   "agent": "support-agent",
+   "severity": "medium",
+   "title": "4 consecutive failures on tool:create_ticket",
+   "evidence": "4 failed attempts in a row on tool:create_ticket (threshold 3); median gap between attempts 1047 ms; errors: TimeoutError",
+   "span_ids": [
+    "3aeb35623de1dade",
+    "ea75712652fe8d72",
+    "2021a70d0c56b028",
+    "539f916e21cf4640"
+   ],
+   "wasted_tokens": 5398,
+   "est_savings": 0.02772
+  },
+  {
+   "detector": "oversized_model",
+   "trace_id": "752d71252708063dc3bae478f24509a5",
+   "agent": "research-agent",
+   "severity": "low",
+   "title": "2 trivial steps on large model vega-pro",
+   "evidence": "2 calls with <= 600 input and <= 50 output tokens ran on a large-tier model; routing them to vega-flash would cost less",
+   "span_ids": [
+    "44cfa19699823cb4",
+    "421e103443f96c59"
+   ],
+   "wasted_tokens": 0,
+   "est_savings": 0.0020184
+  },
+  {
+   "detector": "prompt_bloat",
+   "trace_id": "fe219e910d548373d5079c796c51dcad",
+   "agent": "sql-analyst",
+   "severity": "high",
+   "title": "Prompt grew 7.0x over 6 LLM calls",
+   "evidence": "input tokens 2305 -> 16194 (7.0x, threshold 2.5x), grew on 5/5 steps. Savings assume compaction removes 50% of the growth",
+   "span_ids": [
+    "17c36a71ec02884b",
+    "160cae644b318a03",
+    "6c4179829787f16d",
+    "3b7c15603a3a2365",
+    "84dc0f43a9777c3a",
+    "bafc3b4e908c8cf2"
+   ],
+   "wasted_tokens": 21384,
+   "est_savings": 0.10692
+  },
+  {
+   "detector": "idle_run",
+   "trace_id": "7a49f42b19ecb589a41e13208f28b7a8",
+   "agent": "faq-bot",
+   "severity": "medium",
+   "title": "Idle run: 728 tokens, no tool calls",
+   "evidence": "1 LLM call(s), 700 input tokens, 0 tool calls, only 28 output tokens. A cheap non-LLM pre-check (e.g. 'anything changed since last run?') could skip this run entirely",
+   "span_ids": [
+    "7666e4c851c62a30"
+   ],
+   "wasted_tokens": 728,
+   "est_savings": 8.120000000000001e-05
+  },
+  {
+   "detector": "retry_storm",
+   "trace_id": "b68e494dd9d035e3b30e4822f463beb7",
+   "agent": "support-agent",
+   "severity": "medium",
+   "title": "4 consecutive failures on tool:send_reply",
+   "evidence": "4 failed attempts in a row on tool:send_reply (threshold 3); median gap between attempts 1145 ms; errors: ConnectionError",
+   "span_ids": [
+    "546174aaea258c65",
+    "531a8c16d12b969e",
+    "6f768057af921b49",
+    "7200950976879dcf"
+   ],
+   "wasted_tokens": 9091,
+   "est_savings": 0.046335
+  },
+  {
+   "detector": "tool_loop",
+   "trace_id": "1ae9f778776f5126206bdc56982a3576",
+   "agent": "support-agent",
+   "severity": "medium",
+   "title": "send_reply called 5x with identical arguments",
+   "evidence": "tool=send_reply args={\"query\": \"send_reply-887788319\"} repeated 5 times (threshold 3); 4 calls and 4 deciding LLM calls are redundant",
+   "span_ids": [
+    "c87c3d8fe990c65e",
+    "361410a8386754a2",
+    "bf87f4cc7c5a1cac",
+    "ad375eb684e06472",
+    "2541b413d4279c0e"
+   ],
+   "wasted_tokens": 8475,
+   "est_savings": 0.044485
+  },
+  {
+   "detector": "prompt_bloat",
+   "trace_id": "1ae9f778776f5126206bdc56982a3576",
+   "agent": "support-agent",
+   "severity": "medium",
+   "title": "Prompt grew 2.9x over 9 LLM calls",
+   "evidence": "input tokens 1438 -> 4241 (2.9x, threshold 2.5x), grew on 8/8 steps. Savings assume compaction removes 50% of the growth",
+   "span_ids": [
+    "0c73949fef5edd66",
+    "d955dc9adb3686fe",
+    "ad40134e8557c6aa",
+    "e1c60b7b8a7f2ee3",
+    "e1ec7d8b5a4edcb7",
+    "5d911692836bd2f7",
+    "f181ab64f6969b4b",
+    "83191a979d6189fd",
+    "1adb9a9fa6e6ecbe"
+   ],
+   "wasted_tokens": 5364,
+   "est_savings": 0.02682
+  },
+  {
+   "detector": "tool_loop",
+   "trace_id": "eaed87d90614f0057654865eea7f7f6b",
+   "agent": "research-agent",
+   "severity": "high",
+   "title": "fetch_page called 6x with identical arguments",
+   "evidence": "tool=fetch_page args={\"query\": \"fetch_page-858129550\"} repeated 6 times (threshold 3); 5 calls and 5 deciding LLM calls are redundant",
+   "span_ids": [
+    "350b7a360e4a04d8",
+    "40badeb83572f0f5",
+    "75043b12087d79a5",
+    "e4e0401e79c272d8",
+    "61e47a6e1d5036a8",
+    "8d1d9b6312ea2c7f"
+   ],
+   "wasted_tokens": 17296,
+   "est_savings": 0.054201
+  },
+  {
+   "detector": "prompt_bloat",
+   "trace_id": "eaed87d90614f0057654865eea7f7f6b",
+   "agent": "research-agent",
+   "severity": "medium",
+   "title": "Prompt grew 2.6x over 11 LLM calls",
+   "evidence": "input tokens 2585 -> 6714 (2.6x, threshold 2.5x), grew on 10/10 steps. Savings assume compaction removes 50% of the growth",
+   "span_ids": [
+    "09e676fe2c325c95",
+    "d92d088395823e74",
+    "9c91e8e54f30d268",
+    "9960c1696fb975cd",
+    "e990b82e29e1050a",
+    "ba65ccc02eac9f85",
+    "3192385da6285d8e",
+    "afae9588c141ba8b",
+    "bc14c1e596920f46",
+    "1293d2d6d6cdeb2d",
+    "93f73f1a28554820"
+   ],
+   "wasted_tokens": 9385,
+   "est_savings": 0.028155000000000003
+  },
+  {
+   "detector": "idle_run",
+   "trace_id": "83b21b18b130088b004cfbd578a5e0ed",
+   "agent": "ops-heartbeat",
+   "severity": "medium",
+   "title": "Idle run: 5424 tokens, no tool calls",
+   "evidence": "1 LLM call(s), 5404 input tokens, 0 tool calls, output says 'no action'. A cheap non-LLM pre-check (e.g. 'anything changed since last run?') could skip this run entirely",
+   "span_ids": [
+    "7c63de56667fb55c"
+   ],
+   "wasted_tokens": 5424,
+   "est_savings": 0.016452
+  },
+  {
+   "detector": "prompt_bloat",
+   "trace_id": "697c19e193ae1447d3a612235b621d25",
+   "agent": "research-agent",
+   "severity": "medium",
+   "title": "Prompt grew 2.6x over 8 LLM calls",
+   "evidence": "input tokens 2842 -> 7350 (2.6x, threshold 2.5x), grew on 7/7 steps. Savings assume compaction removes 50% of the growth",
+   "span_ids": [
+    "a8b9704cd1989172",
+    "32d4cddcb1c741dc",
+    "efdeda89b1743e03",
+    "e0a95f2f0220dfc6",
+    "27fc80ece27ef596",
+    "6b28c95bdbc1cf8a",
+    "9dbf4277589e4b66",
+    "55bf0d58023702d6"
+   ],
+   "wasted_tokens": 9237,
+   "est_savings": 0.027711
+  },
+  {
+   "detector": "idle_run",
+   "trace_id": "b19d78e30768570c82fba3d1936f88ce",
+   "agent": "ops-heartbeat",
+   "severity": "medium",
+   "title": "Idle run: 2195 tokens, no tool calls",
+   "evidence": "1 LLM call(s), 2186 input tokens, 0 tool calls, output says 'no action'. A cheap non-LLM pre-check (e.g. 'anything changed since last run?') could skip this run entirely",
+   "span_ids": [
+    "812a7c82f200a6f9"
+   ],
+   "wasted_tokens": 2195,
+   "est_savings": 0.006666
+  },
+  {
+   "detector": "idle_run",
+   "trace_id": "f5494b5d071ef20f6e0b214f5e2d5f94",
+   "agent": "ops-heartbeat",
+   "severity": "medium",
+   "title": "Idle run: 4285 tokens, no tool calls",
+   "evidence": "2 LLM call(s), 4263 input tokens, 0 tool calls, output says 'nothing happened'. A cheap non-LLM pre-check (e.g. 'anything changed since last run?') could skip this run entirely",
+   "span_ids": [
+    "84ecd2aee4f5297c",
+    "c51b3ac779892ad6"
+   ],
+   "wasted_tokens": 4285,
+   "est_savings": 0.012287399999999999
+  },
+  {
+   "detector": "tool_loop",
+   "trace_id": "e9d0454a5334ac98e3abed80d9d5c321",
+   "agent": "research-agent",
+   "severity": "medium",
+   "title": "web_search called 3x with identical arguments",
+   "evidence": "tool=web_search args={\"query\": \"web_search-700426535\"} repeated 3 times (threshold 3); 2 calls and 2 deciding LLM calls are redundant",
+   "span_ids": [
+    "567136cef20f9a17",
+    "50fd4b745b27737f",
+    "3629a4ef1cd15e09"
+   ],
+   "wasted_tokens": 9090,
+   "est_savings": 0.027882
+  },
+  {
+   "detector": "oversized_model",
+   "trace_id": "8f3747794d3e8ae090f7a1d1f09df083",
+   "agent": "support-agent",
+   "severity": "low",
+   "title": "5 trivial steps on large model orion-large",
+   "evidence": "5 calls with <= 600 input and <= 50 output tokens ran on a large-tier model; routing them to orion-mini would cost less",
+   "span_ids": [
+    "da6a7c2eebc6c400",
+    "2c79956d49d5deec",
+    "e3b95f8fd909f159",
+    "c61c3d5859c13918",
+    "2b42673e7bbfa8ea"
+   ],
+   "wasted_tokens": 0,
+   "est_savings": 0.0108
+  },
+  {
+   "detector": "tool_loop",
+   "trace_id": "49515159cc66c8a1798aa772da38562b",
+   "agent": "ops-heartbeat",
+   "severity": "medium",
+   "title": "check_status called 3x with identical arguments",
+   "evidence": "tool=check_status args={\"service\": \"payments-api\"} repeated 3 times (threshold 3); 2 calls and 1 deciding LLM calls are redundant",
+   "span_ids": [
+    "221b789e710f6f83",
+    "788c51516d547e1c",
+    "5c467deb6529adf5"
+   ],
+   "wasted_tokens": 2639,
+   "est_savings": 0.009591
+  },
+  {
+   "detector": "oversized_model",
+   "trace_id": "3378d6c401d9587a49fde50598b28ca8",
+   "agent": "sql-analyst",
+   "severity": "low",
+   "title": "2 trivial steps on large model orion-large",
+   "evidence": "2 calls with <= 600 input and <= 50 output tokens ran on a large-tier model; routing them to orion-mini would cost less",
+   "span_ids": [
+    "49371332be7d4412",
+    "a725a5e2a99b1357"
+   ],
+   "wasted_tokens": 0,
+   "est_savings": 0.0057404
+  },
+  {
+   "detector": "prompt_bloat",
+   "trace_id": "1f169d17e6331c8114f55a5e8ac34aa0",
+   "agent": "research-agent",
+   "severity": "high",
+   "title": "Prompt grew 6.9x over 8 LLM calls",
+   "evidence": "input tokens 3839 -> 26361 (6.9x, threshold 2.5x), grew on 7/7 steps. Savings assume compaction removes 50% of the growth",
+   "span_ids": [
+    "a5234b3cb5e06b0e",
+    "adf6ce2fdff2ff43",
+    "ed1928e59bd3cc80",
+    "2e9ebcda0f2d73b9",
+    "dff3fbae956e71fb",
+    "7ecd615bc4dc474e",
+    "22ba7c45ea4f7c3b",
+    "26909126c9bc5d2c"
+   ],
+   "wasted_tokens": 47422,
+   "est_savings": 0.142266
+  },
+  {
+   "detector": "tool_loop",
+   "trace_id": "cab4f0e634bdd8b7bf0e489d0bb386db",
+   "agent": "support-agent",
+   "severity": "medium",
+   "title": "send_reply called 5x with identical arguments",
+   "evidence": "tool=send_reply args={\"query\": \"send_reply-222916536\"} repeated 5 times (threshold 3); 4 calls and 4 deciding LLM calls are redundant",
+   "span_ids": [
+    "b375c7a28af0dd8d",
+    "b78974bb8d3247a3",
+    "bbd1414b119e23e6",
+    "17a24d7781afc5fe",
+    "830116f679e5cb20"
+   ],
+   "wasted_tokens": 15240,
+   "est_savings": 0.07855000000000001
+  },
+  {
+   "detector": "idle_run",
+   "trace_id": "33c25e9378262f74a243d59d90d70dfb",
+   "agent": "ops-heartbeat",
+   "severity": "medium",
+   "title": "Idle run: 4339 tokens, no tool calls",
+   "evidence": "2 LLM call(s), 4304 input tokens, 0 tool calls, output says 'no action'. A cheap non-LLM pre-check (e.g. 'anything changed since last run?') could skip this run entirely",
+   "span_ids": [
+    "d5a38c5edcf05365",
+    "6d577ccc058ff66e"
+   ],
+   "wasted_tokens": 4339,
+   "est_savings": 0.0122329
+  },
+  {
+   "detector": "idle_run",
+   "trace_id": "3479e48e871805a3747f61e7f732bc85",
+   "agent": "research-agent",
+   "severity": "medium",
+   "title": "Idle run: 5327 tokens, no tool calls",
+   "evidence": "1 LLM call(s), 5300 input tokens, 0 tool calls, output says 'nothing happened'. A cheap non-LLM pre-check (e.g. 'anything changed since last run?') could skip this run entirely",
+   "span_ids": [
+    "4d27f119a53ea8bc"
+   ],
+   "wasted_tokens": 5327,
+   "est_savings": 0.016224
+  },
+  {
+   "detector": "prompt_bloat",
+   "trace_id": "4672193a5a6c995ccda185a51e09f522",
+   "agent": "research-agent",
+   "severity": "high",
+   "title": "Prompt grew 5.2x over 6 LLM calls",
+   "evidence": "input tokens 3219 -> 16636 (5.2x, threshold 2.5x), grew on 5/5 steps. Savings assume compaction removes 50% of the growth",
+   "span_ids": [
+    "aec002642e148440",
+    "29d17687eca4eade",
+    "ddcb32bb255e41b2",
+    "5b76df609bf85468",
+    "05a13ea1011efe1e",
+    "14111c2b33528551"
+   ],
+   "wasted_tokens": 20838,
+   "est_savings": 0.062514
+  },
+  {
+   "detector": "oversized_model",
+   "trace_id": "936498958604e4a9093a5d376b947405",
+   "agent": "sql-analyst",
+   "severity": "low",
+   "title": "2 trivial steps on large model orion-large",
+   "evidence": "2 calls with <= 600 input and <= 50 output tokens ran on a large-tier model; routing them to orion-mini would cost less",
+   "span_ids": [
+    "81951a47fbbb2051",
+    "59aaae048bdbbc7a"
+   ],
+   "wasted_tokens": 0,
+   "est_savings": 0.0034963
+  },
+  {
+   "detector": "tool_loop",
+   "trace_id": "d6fbf73b2e9b989789ab96bbfc81a2e8",
+   "agent": "research-agent",
+   "severity": "high",
+   "title": "web_search called 8x with identical arguments",
+   "evidence": "tool=web_search args={\"query\": \"web_search-67413715\"} repeated 8 times (threshold 3); 7 calls and 7 deciding LLM calls are redundant",
+   "span_ids": [
+    "a661949fc5a9106e",
+    "a5462df4e18acd8d",
+    "8f6847be623abb33",
+    "e73fb6222f8c9430",
+    "3531a4ba77bbde6c",
+    "8ed8e6b6b4fe1eb8",
+    "fb3319630da0ba2a",
+    "10776546b65932c8"
+   ],
+   "wasted_tokens": 28020,
+   "est_savings": 0.087309
+  },
+  {
+   "detector": "idle_run",
+   "trace_id": "0c30daebb77752e7b11c5f71974ea666",
+   "agent": "ops-heartbeat",
+   "severity": "medium",
+   "title": "Idle run: 3511 tokens, no tool calls",
+   "evidence": "1 LLM call(s), 3477 input tokens, 0 tool calls, only 34 output tokens. A cheap non-LLM pre-check (e.g. 'anything changed since last run?') could skip this run entirely",
+   "span_ids": [
+    "34572db5350b88e6"
+   ],
+   "wasted_tokens": 3511,
+   "est_savings": 0.010839
+  },
+  {
+   "detector": "tool_loop",
+   "trace_id": "cbb5ab50cca7fa3b5d6f07b43dad747d",
+   "agent": "sql-analyst",
+   "severity": "high",
+   "title": "render_chart called 6x with identical arguments",
+   "evidence": "tool=render_chart args={\"query\": \"render_chart-388532938\"} repeated 6 times (threshold 3); 5 calls and 5 deciding LLM calls are redundant",
+   "span_ids": [
+    "0446521e3b39854c",
+    "45cbf44e5ede07dd",
+    "952fdddabbec6769",
+    "14f770f7f7e3ab2d",
+    "54b264926b29981c",
+    "e57974140e5a4751"
+   ],
+   "wasted_tokens": 14223,
+   "est_savings": 0.073015
+  },
+  {
+   "detector": "tool_loop",
+   "trace_id": "f7c67c0a3c9bf44cbd4fa81cf3abc4eb",
+   "agent": "ops-heartbeat",
+   "severity": "medium",
+   "title": "check_status called 3x with identical arguments",
+   "evidence": "tool=check_status args={\"service\": \"payments-api\"} repeated 3 times (threshold 3); 2 calls and 1 deciding LLM calls are redundant",
+   "span_ids": [
+    "fb24e53111b66523",
+    "af8587960ea50157",
+    "b89a972958df8fd5"
+   ],
+   "wasted_tokens": 2671,
+   "est_savings": 0.009381
+  },
+  {
+   "detector": "prompt_bloat",
+   "trace_id": "6985276d2b1cd0d3dacef96048d5a1c5",
+   "agent": "support-agent",
+   "severity": "high",
+   "title": "Prompt grew 10.4x over 7 LLM calls",
+   "evidence": "input tokens 1911 -> 19934 (10.4x, threshold 2.5x), grew on 6/6 steps. Savings assume compaction removes 50% of the growth",
+   "span_ids": [
+    "b5ea09ccd21f5add",
+    "4d4df4c37341eb55",
+    "0d385a4026f317f0",
+    "a587b762818f0883",
+    "6f93327d4ea635cf",
+    "837410bf80d17b77",
+    "673b1a166418d234"
+   ],
+   "wasted_tokens": 30059,
+   "est_savings": 0.150295
+  },
+  {
+   "detector": "oversized_model",
+   "trace_id": "6985276d2b1cd0d3dacef96048d5a1c5",
+   "agent": "support-agent",
+   "severity": "low",
+   "title": "2 trivial steps on large model orion-large",
+   "evidence": "2 calls with <= 600 input and <= 50 output tokens ran on a large-tier model; routing them to orion-mini would cost less",
+   "span_ids": [
+    "1ee69b68e7e032b0",
+    "298bd564d42f6bc7"
+   ],
+   "wasted_tokens": 0,
+   "est_savings": 0.0037687
+  },
+  {
+   "detector": "idle_run",
+   "trace_id": "6cb35ce2100bdf506c333aeaf8f6bf24",
+   "agent": "research-agent",
+   "severity": "medium",
+   "title": "Idle run: 5487 tokens, no tool calls",
+   "evidence": "1 LLM call(s), 5467 input tokens, 0 tool calls, output says 'nothing happened'. A cheap non-LLM pre-check (e.g. 'anything changed since last run?') could skip this run entirely",
+   "span_ids": [
+    "7213d4a3886ffdb2"
+   ],
+   "wasted_tokens": 5487,
+   "est_savings": 0.016641
+  },
+  {
+   "detector": "prompt_bloat",
+   "trace_id": "d43baff3cef90eae8282a46cedecae6a",
+   "agent": "sql-analyst",
+   "severity": "high",
+   "title": "Prompt grew 6.8x over 7 LLM calls",
+   "evidence": "input tokens 2975 -> 20263 (6.8x, threshold 2.5x), grew on 6/6 steps. Savings assume compaction removes 50% of the growth",
+   "span_ids": [
+    "b9649f94d40b6abc",
+    "e6199d558e3698e8",
+    "f63b2c0f7fa64b26",
+    "6719f379a84629fe",
+    "ad65e0feba5897ee",
+    "a238f54ba05a582f",
+    "e059f743590bc72d"
+   ],
+   "wasted_tokens": 31371,
+   "est_savings": 0.156855
+  },
+  {
+   "detector": "idle_run",
+   "trace_id": "dabc36199d4fa114fddc4552d577f441",
+   "agent": "ops-heartbeat",
+   "severity": "medium",
+   "title": "Idle run: 2772 tokens, no tool calls",
+   "evidence": "2 LLM call(s), 2748 input tokens, 0 tool calls, output says 'nothing happened'. A cheap non-LLM pre-check (e.g. 'anything changed since last run?') could skip this run entirely",
+   "span_ids": [
+    "d7a800b9242e8f55",
+    "be4097fea1da08a5"
+   ],
+   "wasted_tokens": 2772,
+   "est_savings": 0.0078882
+  },
+  {
+   "detector": "tool_loop",
+   "trace_id": "4735d1590a59f187fa7e95c946da9696",
+   "agent": "support-agent",
+   "severity": "medium",
+   "title": "search_kb called 5x with identical arguments",
+   "evidence": "tool=search_kb args={\"query\": \"search_kb-264704509\"} repeated 5 times (threshold 3); 4 calls and 4 deciding LLM calls are redundant",
+   "span_ids": [
+    "29d2a73714ad450d",
+    "813026e33b3d70f6",
+    "f6feb3321f6dd463",
+    "f00ea29d01ad3eb3",
+    "cdfe0004de943130"
+   ],
+   "wasted_tokens": 8980,
+   "est_savings": 0.04734
+  },
+  {
+   "detector": "idle_run",
+   "trace_id": "38d3c4c4740357ce8e5d790e10c42bfb",
+   "agent": "faq-bot",
+   "severity": "medium",
+   "title": "Idle run: 456 tokens, no tool calls",
+   "evidence": "1 LLM call(s), 435 input tokens, 0 tool calls, only 21 output tokens. A cheap non-LLM pre-check (e.g. 'anything changed since last run?') could skip this run entirely",
+   "span_ids": [
+    "fcf6f900917f06dc"
+   ],
+   "wasted_tokens": 456,
+   "est_savings": 5.19e-05
+  },
+  {
+   "detector": "tool_loop",
+   "trace_id": "5ede88f94f63ceb0bd1419afd19c662e",
+   "agent": "sql-analyst",
+   "severity": "medium",
+   "title": "list_tables called 5x with identical arguments",
+   "evidence": "tool=list_tables args={\"query\": \"list_tables-211500573\"} repeated 5 times (threshold 3); 4 calls and 4 deciding LLM calls are redundant",
+   "span_ids": [
+    "f2344a79aad83bb4",
+    "66458972d088e438",
+    "794d31e1d1010137",
+    "669f76766286a2dc",
+    "f9008cca7b0c65ef"
+   ],
+   "wasted_tokens": 11436,
+   "est_savings": 0.05958
+  },
+  {
+   "detector": "retry_storm",
+   "trace_id": "5ede88f94f63ceb0bd1419afd19c662e",
+   "agent": "sql-analyst",
+   "severity": "high",
+   "title": "6 consecutive failures on tool:list_tables",
+   "evidence": "6 failed attempts in a row on tool:list_tables (threshold 3); median gap between attempts 1177 ms; errors: TimeoutError",
+   "span_ids": [
+    "5a505abf8fe853a8",
+    "abd4b2c88008c710",
+    "d990f664578ed08c",
+    "6f8ff48e960baaa4",
+    "521676cbe1661340",
+    "7db2ed191213792e"
+   ],
+   "wasted_tokens": 17753,
+   "est_savings": 0.090395
+  },
+  {
+   "detector": "idle_run",
+   "trace_id": "3f2b21c5ddfb8af9bccce1c9365d1bde",
+   "agent": "ops-heartbeat",
+   "severity": "medium",
+   "title": "Idle run: 2305 tokens, no tool calls",
+   "evidence": "2 LLM call(s), 2294 input tokens, 0 tool calls, output says 'nothing to report'. A cheap non-LLM pre-check (e.g. 'anything changed since last run?') could skip this run entirely",
+   "span_ids": [
+    "dadf3a150dda058a",
+    "a3c02b7e9591e4de"
+   ],
+   "wasted_tokens": 2305,
+   "est_savings": 0.0058772
+  }
+ ],
+ "parse_errors": [],
+ "unknown_models": [],
+ "disclaimer": "Synthetic traces, example prices: numbers illustrate the method, not real billing."
+}

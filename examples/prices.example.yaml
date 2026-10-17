@@ -1,0 +1,41 @@
+# agentlens example price table
+# ---------------------------------------------------------------------------
+# EXAMPLE PRICES ONLY. The model names below are fictional and the prices are
+# illustrative numbers chosen to look like typical large/small model tiers.
+# They are NOT real vendor prices and must not be used for billing.
+# Copy this file, put in your own models and prices, and pass it with
+#   agentlens analyze traces.jsonl --prices my_prices.yaml
+# ---------------------------------------------------------------------------
+currency: USD
+unit: per_1m_tokens
+
+# Used for any model that is not listed below (reported as "unknown model").
+default:
+  input: 1.00
+  output: 4.00
+  tier: standard
+
+models:
+  orion-large:
+    input: 5.00
+    output: 15.00
+    tier: large
+    downgrade_to: orion-mini
+  orion-mini:
+    input: 0.30
+    output: 1.20
+    tier: small
+  vega-pro:
+    input: 3.00
+    output: 12.00
+    tier: large
+    downgrade_to: vega-flash
+  vega-flash:
+    input: 0.10
+    output: 0.40
+    tier: small
+
+# Optional: override detector thresholds (see agentlens.detectors.DetectorConfig)
+# detectors:
+#   loop_min_repeats: 3
+#   retry_min_consecutive_failures: 3
